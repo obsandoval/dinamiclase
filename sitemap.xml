@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://dinamiclase.org/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Herramientas -->
+  <url>
+    <loc>https://dinamiclase.org/asignador-grupos.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/asignador-temas.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/storycube-normal.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/storycube-por-lotes.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/loteria-app.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/loteria-aleatoria.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/ruleta.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/preguntas-rompe-hielo.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dinamiclase.org/pizarra.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/pomodoro.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

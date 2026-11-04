@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preguntas rompe-hielo · Dinamiclase</title>
+    <meta name="description" content="Más de 100 preguntas rompe-hielo al azar para animar tu clase, con temporizador, elección aleatoria de quién responde y tus propias preguntas.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/preguntas-rompe-hielo.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Preguntas rompe-hielo · Dinamiclase">
+    <meta property="og:description" content="Más de 100 preguntas rompe-hielo al azar para animar tu clase, con temporizador, elección aleatoria de quién responde y tus propias preguntas.">
+    <meta property="og:url" content="https://dinamiclase.org/preguntas-rompe-hielo.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-chat-quote-fill" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-cyan" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-cyan" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Preguntas rompe-hielo</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-controller" aria-hidden="true"></i> Juega</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Preguntas rompe-hielo</h1>
+              <p class="dc-toolhero__lead">Preguntas rápidas y divertidas que aparecen al azar para animar al grupo. Pon un límite de tiempo y elige al azar quién responde.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Saca una pregunta</li><li>Elige quién responde</li><li>Pon el tiempo en marcha</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-cyan" id="herramienta" aria-label="Preguntas rompe-hielo">
+        <div class="dc-container">
+          <div class="dc-stack">
+            <div class="dc-panel dc-stage" id="stage">
+              <div class="dc-stagebar">
+                <span class="dc-counter" id="progressLabel">0 preguntas vistas</span>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-icon-btn" id="copyBtn" type="button" title="Copiar pregunta" aria-label="Copiar pregunta" disabled><i class="bi bi-clipboard" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+              <div class="qz-card" id="questionBox">
+                <span class="qz-card__badge" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+                <p class="qz-card__text" id="questionText" aria-live="polite">Pulsa <strong>«Nueva pregunta»</strong> para empezar</p>
+                <p class="qz-card__who" id="who" hidden><i class="bi bi-person-raised-hand" aria-hidden="true"></i> Responde: <strong id="whoName"></strong></p>
+              </div>
+
+              <div class="dc-row dc-row--center qz-actions">
+                <button class="dc-btn dc-btn--ghost dc-btn--sm" id="prevBtn" type="button" disabled><i class="bi bi-arrow-left" aria-hidden="true"></i> Anterior</button>
+                <button class="dc-btn" id="revealBtn" type="button"><i class="bi bi-shuffle" aria-hidden="true"></i> Nueva pregunta</button>
+                <button class="dc-btn dc-btn--ghost dc-btn--sm" id="whoBtn" type="button"><i class="bi bi-person-raised-hand" aria-hidden="true"></i> ¿Quién responde?</button>
+              </div>
+              <p class="dc-field__hint dc-kbd-hint" style="text-align:center"><kbd class="dc-kbd">Espacio</kbd> nueva pregunta · <kbd class="dc-kbd">←</kbd> anterior · <kbd class="dc-kbd">Q</kbd> quién responde</p>
+            </div>
+
+            <div class="dc-split dc-split--even">
+              <div class="dc-panel dc-stack dc-stack--sm">
+                <h2 class="dc-panel__title" style="margin:0"><i class="bi bi-stopwatch-fill" aria-hidden="true"></i> ¡Piensa rápido!</h2>
+                <div class="dc-timer" data-dc-timer data-seconds="30">
+                  <div class="dc-timer__ring" aria-hidden="true">
+                    <svg viewBox="0 0 100 100"><circle class="dc-timer__track" cx="50" cy="50" r="42"/><circle class="dc-timer__bar" cx="50" cy="50" r="42" pathLength="1"/></svg>
+                    <span class="dc-timer__time">0:30</span>
+                  </div>
+                  <div class="dc-timer__body">
+                    <div class="dc-segmented dc-segmented--sm" role="radiogroup" aria-label="Tiempo para responder">
+                      <label><input type="radio" name="qTime" value="15"><span>15 s</span></label>
+                      <label><input type="radio" name="qTime" value="30" checked><span>30 s</span></label>
+                      <label><input type="radio" name="qTime" value="60"><span>60 s</span></label>
+                    </div>
+                    <div class="dc-row">
+                      <button class="dc-btn dc-btn--sm dc-btn--theme" type="button" data-dc-timer-toggle><i class="bi bi-play-fill" aria-hidden="true"></i> Iniciar</button>
+                      <button class="dc-icon-btn" type="button" data-dc-timer-reset aria-label="Reiniciar temporizador" title="Reiniciar"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                  <span class="dc-visually-hidden" data-dc-timer-live aria-live="polite"></span>
+                </div>
+                <label class="dc-switch"><input type="checkbox" id="autoTimer" data-dc-persist="preguntas-auto-tiempo"><span class="dc-switch__track"></span><span>Iniciar el tiempo con cada pregunta</span></label>
+              </div>
+
+              <div class="dc-panel dc-stack dc-stack--sm">
+                <h2 class="dc-panel__title" style="margin:0"><i class="bi bi-sliders" aria-hidden="true"></i> Personaliza</h2>
+                <span class="dc-label" style="margin:0">Preguntas a usar</span>
+                <div class="dc-segmented dc-segmented--sm" role="radiogroup" aria-label="Origen de las preguntas">
+                  <label><input type="radio" name="source" value="banco" checked><span>Banco Dinamiclase</span></label>
+                  <label><input type="radio" name="source" value="mias"><span>Mis preguntas</span></label>
+                  <label><input type="radio" name="source" value="ambas"><span>Ambas</span></label>
+                </div>
+                <details class="qz-details">
+                  <summary><i class="bi bi-pencil-square" aria-hidden="true"></i> Mis preguntas <span class="dc-counter" id="customCount">0</span></summary>
+                  <textarea id="custom" class="dc-input" data-dc-persist="preguntas-propias" placeholder="Escribe una pregunta por línea"></textarea>
+                </details>
+                <details class="qz-details">
+                  <summary><i class="bi bi-people-fill" aria-hidden="true"></i> Estudiantes para «¿Quién responde?» <span class="dc-counter" id="studentsCount">0</span></summary>
+                  <textarea id="students" class="dc-input" data-dc-persist="lista-estudiantes" placeholder="Un nombre por línea (lista compartida con otras herramientas)"></textarea>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-cyan" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-sunrise-fill"></i></span>
+              <h3>Inicio de clase</h3>
+              <p>Una pregunta al azar para empezar con energía y conocer mejor al grupo.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-stopwatch-fill"></i></span>
+              <h3>Piensa rápido</h3>
+              <p>Usa el temporizador de 15 segundos para entrenar respuestas espontáneas.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+              <h3>En parejas</h3>
+              <p>Proyecta la pregunta: cada pareja comparte su respuesta antes de abrirla a la clase.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-orange"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-green dc-reveal" href="ruleta.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-pie-chart-fill"></i></span>
+              <span><strong>Ruleta de sorteos</strong><span class="dc-mini-tool__desc">Gira y elige al azar.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-pink dc-reveal" href="storycube-normal.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-dice-3-fill"></i></span>
+              <span><strong>Story Icons</strong><span class="dc-mini-tool__desc">Íconos al azar para inventar historias.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-red dc-reveal" href="pomodoro.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-stopwatch-fill"></i></span>
+              <span><strong>Técnica Pomodoro</strong><span class="dc-mini-tool__desc">Gestiona el tiempo de trabajo.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="preguntas-rompe-hielo.js"></script>
+  </body>
+</html>

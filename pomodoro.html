@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Técnica Pomodoro · Dinamiclase</title>
+    <meta name="description" content="Temporizador Pomodoro online: 25 minutos de concentración y 5 de descanso, con descanso largo cada 4 ciclos. Ajusta los tiempos y proyéctalo en clase.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/pomodoro.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Técnica Pomodoro · Dinamiclase">
+    <meta property="og:description" content="Temporizador Pomodoro online: 25 minutos de concentración y 5 de descanso, con descanso largo cada 4 ciclos. Ajusta los tiempos y proyéctalo en clase.">
+    <meta property="og:url" content="https://dinamiclase.org/pomodoro.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-stopwatch-fill" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-red" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-red" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Técnica Pomodoro</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-stopwatch-fill"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Técnica Pomodoro</h1>
+              <p class="dc-toolhero__lead">Bloques de concentración y descanso: 25 minutos de trabajo y 5 de descanso, con un descanso largo cada 4 ciclos. Ajusta los tiempos a tu clase.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Elige una configuración</li><li>Concéntrate hasta la alarma</li><li>Descansa y repite</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-red" id="herramienta" aria-label="Técnica Pomodoro">
+        <div class="dc-container">
+          <div class="dc-split dc-split--wide">
+            <div class="dc-panel dc-stage pm dc-theme-red" id="stage">
+              <div class="dc-stagebar">
+                <span class="pm-phase" id="phase"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Concentración</span>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+              <div class="pm-ring" role="timer" aria-live="off" aria-labelledby="timeText">
+                <svg viewBox="0 0 200 200" aria-hidden="true">
+                  <circle class="pm-ring__track" cx="100" cy="100" r="88"/>
+                  <circle class="pm-ring__bar" id="ringBar" cx="100" cy="100" r="88" pathLength="1"/>
+                </svg>
+                <div class="pm-ring__center">
+                  <span class="pm-ring__time" id="timeText">25:00</span>
+                  <span class="pm-ring__label" id="timeLabel">listo para empezar</span>
+                </div>
+              </div>
+
+              <ol class="pm-dots" id="dots" aria-label="Ciclos hasta el descanso largo"></ol>
+
+              <div class="dc-row dc-row--center pm-controls">
+                <button class="dc-btn dc-btn--sm dc-btn--ghost" id="resetBtn" type="button"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Reiniciar</button>
+                <button class="dc-btn dc-btn--theme" id="startBtn" type="button"><i class="bi bi-play-fill" aria-hidden="true"></i> Iniciar</button>
+                <button class="dc-btn dc-btn--sm dc-btn--ghost" id="skipBtn" type="button"><i class="bi bi-skip-forward-fill" aria-hidden="true"></i> Saltar fase</button>
+              </div>
+              <p class="dc-field__hint dc-kbd-hint" style="text-align:center"><kbd class="dc-kbd">Espacio</kbd> iniciar o pausar · <kbd class="dc-kbd">S</kbd> saltar fase</p>
+              <p class="dc-visually-hidden" id="live" aria-live="assertive"></p>
+            </div>
+
+            <div class="dc-stack">
+              <div class="dc-panel dc-stack dc-stack--sm">
+                <h2 class="dc-panel__title" style="margin:0"><i class="bi bi-sliders" aria-hidden="true"></i> Configuración</h2>
+                <div class="dc-segmented dc-segmented--sm dc-segmented--block" role="radiogroup" aria-label="Configuración rápida" id="presets">
+                  <label><input type="radio" name="preset" value="25,5,15,4" checked><span>Clásico</span></label>
+                  <label><input type="radio" name="preset" value="50,10,30,4"><span>Extendido</span></label>
+                  <label><input type="radio" name="preset" value="15,3,10,4"><span>Rápido</span></label>
+                  <label><input type="radio" name="preset" value="custom"><span>A medida</span></label>
+                </div>
+                <div class="pm-config">
+                  <div class="pm-config__item"><span>Concentración <small>min</small></span>
+                    <span class="dc-stepper" data-dc-stepper><button type="button" data-step="-1" aria-label="Menos minutos de concentración">−</button><input type="number" id="cfgWork" aria-label="Minutos de concentración" min="1" max="120" value="25" data-dc-persist="pomodoro-trabajo"><button type="button" data-step="1" aria-label="Más minutos de concentración">+</button></span></div>
+                  <div class="pm-config__item"><span>Descanso <small>min</small></span>
+                    <span class="dc-stepper" data-dc-stepper><button type="button" data-step="-1" aria-label="Menos minutos de descanso">−</button><input type="number" id="cfgBreak" aria-label="Minutos de descanso" min="1" max="60" value="5" data-dc-persist="pomodoro-descanso"><button type="button" data-step="1" aria-label="Más minutos de descanso">+</button></span></div>
+                  <div class="pm-config__item"><span>Descanso largo <small>min</small></span>
+                    <span class="dc-stepper" data-dc-stepper><button type="button" data-step="-1" aria-label="Menos minutos de descanso largo">−</button><input type="number" id="cfgLong" aria-label="Minutos de descanso largo" min="1" max="90" value="15" data-dc-persist="pomodoro-largo"><button type="button" data-step="1" aria-label="Más minutos de descanso largo">+</button></span></div>
+                  <div class="pm-config__item"><span>Ciclos <small>hasta el largo</small></span>
+                    <span class="dc-stepper" data-dc-stepper><button type="button" data-step="-1" aria-label="Menos ciclos">−</button><input type="number" id="cfgCycles" aria-label="Ciclos hasta el descanso largo" min="2" max="8" value="4" data-dc-persist="pomodoro-ciclos"><button type="button" data-step="1" aria-label="Más ciclos">+</button></span></div>
+                </div>
+                <label class="dc-switch"><input type="checkbox" id="autoNext" checked data-dc-persist="pomodoro-auto"><span class="dc-switch__track"></span><span>Empezar la siguiente fase sola <small>Tras 3 segundos de aviso</small></span></label>
+                <label class="dc-switch"><input type="checkbox" id="notify"><span class="dc-switch__track"></span><span>Avisarme con una notificación <small>Útil si cambias de pestaña</small></span></label>
+              </div>
+
+              <div class="dc-panel">
+                <div class="dc-row dc-row--between">
+                  <h2 class="dc-panel__title" style="margin:0"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i> Hoy</h2>
+                  <button class="dc-link-btn dc-small" type="button" id="resetStats">Reiniciar</button>
+                </div>
+                <div class="pm-stats">
+                  <div class="pm-stat dc-theme-red"><strong id="statPomodoros">0</strong><span>pomodoros</span></div>
+                  <div class="pm-stat dc-theme-blue"><strong id="statMinutes">0</strong><span>minutos de enfoque</span></div>
+                  <div class="pm-stat dc-theme-green"><strong id="statCycle">1</strong><span>ciclo actual</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-red" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-journal-check"></i></span>
+              <h3>Trabajo autónomo</h3>
+              <p>Proyecta el temporizador y que cada estudiante avance en su tarea durante un pomodoro.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-cup-hot-fill"></i></span>
+              <h3>Pausas activas</h3>
+              <p>Usa el descanso para estirarse, hidratarse o responder una pregunta rompe-hielo.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></span>
+              <h3>Metas por ciclo</h3>
+              <p>Antes de cada pomodoro, define una meta concreta y revísala al terminar.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-orange"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-orange dc-reveal" href="pizarra.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-easel2-fill"></i></span>
+              <span><strong>Pizarra de dibujo</strong><span class="dc-mini-tool__desc">Dibuja y explica en grande.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-cyan dc-reveal" href="preguntas-rompe-hielo.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+              <span><strong>Preguntas rompe-hielo</strong><span class="dc-mini-tool__desc">Preguntas para animar al grupo.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-blue dc-reveal" href="asignador-grupos.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+              <span><strong>Grupos aleatorios</strong><span class="dc-mini-tool__desc">Forma equipos equilibrados al azar.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="pomodoro.js"></script>
+  </body>
+</html>

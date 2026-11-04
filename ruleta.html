@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ruleta de sorteos · Dinamiclase</title>
+    <meta name="description" content="Ruleta de sorteos online: escribe nombres, tareas o premios, elige colores y gira para elegir al azar. Puedes quitar al ganador para no repetir.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/ruleta.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Ruleta de sorteos · Dinamiclase">
+    <meta property="og:description" content="Ruleta de sorteos online: escribe nombres, tareas o premios, elige colores y gira para elegir al azar. Puedes quitar al ganador para no repetir.">
+    <meta property="og:url" content="https://dinamiclase.org/ruleta.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-pie-chart-fill" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-green" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-green" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Ruleta de sorteos</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-pie-chart-fill"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-controller" aria-hidden="true"></i> Juega</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Ruleta de sorteos</h1>
+              <p class="dc-toolhero__lead">Escribe nombres, tareas o premios y gira para elegir al azar de forma visual, divertida e imparcial.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Escribe las opciones</li><li>Elige colores y duración</li><li>¡Gira la ruleta!</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-green" id="herramienta" aria-label="Ruleta de sorteos">
+        <div class="dc-container">
+          <div class="dc-split dc-split--stage-first">
+            <div class="dc-panel dc-stack dc-sticky">
+              <div class="dc-field" style="margin:0">
+                <div class="dc-field__head">
+                  <label class="dc-field__label" for="entries"><span class="dc-num">1</span> Opciones de la ruleta</label>
+                  <span class="dc-counter" id="entriesCount">0</span>
+                </div>
+                <textarea id="entries" class="dc-input dc-input--list" data-dc-persist="ruleta-opciones" spellcheck="false"
+        placeholder="Una opción por línea: nombres, tareas, premios…">Ana
+Bruno
+Carla
+Diego
+Elena
+Fernando</textarea>
+                <div class="dc-row" style="margin-top:.6rem">
+                  <button class="dc-tbtn" type="button" id="useStudents"><i class="bi bi-people-fill" aria-hidden="true"></i> Usar mi lista</button>
+                  <button class="dc-tbtn" type="button" id="shuffleEntries"><i class="bi bi-shuffle" aria-hidden="true"></i> Mezclar orden</button>
+                </div>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">2</span> Colores</span>
+                <div class="rl-palettes" role="radiogroup" aria-label="Paleta de colores" id="palettes"></div>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <div class="dc-field__head" style="margin:0">
+                  <label class="dc-field__label" for="duration"><span class="dc-num">3</span> Duración del giro</label>
+                  <span class="dc-counter" id="durationValue">6 s</span>
+                </div>
+                <input class="dc-range" type="range" id="duration" min="3" max="15" step="1" value="6" data-dc-persist="ruleta-duracion">
+                <label class="dc-switch"><input type="checkbox" id="removeWinner" data-dc-persist="ruleta-quitar"><span class="dc-switch__track"></span><span>Quitar al ganador <small>Para sortear varias veces sin repetir</small></span></label>
+              </div>
+            </div>
+
+            <div class="dc-panel dc-stage" id="stage">
+              <div class="dc-stagebar">
+                <h2 class="dc-stagebar__title">¡A girar!</h2>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+              <div class="rl-wheel">
+                <span class="rl-pointer" id="pointer" aria-hidden="true"></span>
+                <canvas id="wheel" role="img" aria-label="Ruleta"></canvas>
+                <button class="rl-hub" id="hub" type="button" aria-label="Girar la ruleta">GIRAR</button>
+              </div>
+
+              <div class="dc-row dc-row--center" style="margin-top:1.25rem">
+                <button class="dc-btn" id="spin" type="button"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> ¡Girar la ruleta!</button>
+              </div>
+              <p class="dc-field__hint" style="text-align:center">También puedes tocar el centro o pulsar <kbd class="dc-kbd">Espacio</kbd>.</p>
+
+              <section class="rl-history" aria-labelledby="winnersTitle">
+                <div class="dc-row dc-row--between">
+                  <h3 class="dc-panel__title" id="winnersTitle" style="margin:0"><i class="bi bi-trophy-fill" aria-hidden="true"></i> Resultados</h3>
+                  <button class="dc-link-btn" type="button" id="clearHistory" hidden>Borrar</button>
+                </div>
+                <ol class="rl-history__list" id="history"></ol>
+                <p class="dc-muted dc-small" id="historyEmpty" style="margin:.5rem 0 0">Aquí aparecerán los resultados de cada giro.</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-green" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-person-raised-hand"></i></span>
+              <h3>¿Quién empieza?</h3>
+              <p>Elige quién presenta primero o quién responde, sin discusiones.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-list-check"></i></span>
+              <h3>Reparto de tareas</h3>
+              <p>Escribe tareas en lugar de nombres y gira para asignarlas.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-gift-fill"></i></span>
+              <h3>Sorteos y premios</h3>
+              <p>Activa «Quitar al ganador» para sortear varios premios sin repetir.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-orange"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-blue dc-reveal" href="asignador-grupos.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+              <span><strong>Grupos aleatorios</strong><span class="dc-mini-tool__desc">Forma equipos equilibrados al azar.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-cyan dc-reveal" href="preguntas-rompe-hielo.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+              <span><strong>Preguntas rompe-hielo</strong><span class="dc-mini-tool__desc">Preguntas para animar al grupo.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-yellow dc-reveal" href="loteria-aleatoria.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-layers-fill"></i></span>
+              <span><strong>Lotería una a una</strong><span class="dc-mini-tool__desc">Canta las cartas del mazo al azar.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <!-- Resultado del giro -->
+    <dialog class="dc-dialog" id="winnerDialog" aria-labelledby="winnerName">
+      <div class="dc-dialog__card dc-theme-green rl-winner">
+        <button class="dc-dialog__close" type="button" data-close aria-label="Cerrar"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+        <p class="dc-eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> ¡Tenemos resultado!</p>
+        <h2 class="rl-winner__name" id="winnerName">…</h2>
+        <div class="dc-dialog__actions">
+          <button class="dc-btn dc-btn--sm dc-btn--ghost" type="button" id="removeBtn"><i class="bi bi-person-dash-fill" aria-hidden="true"></i> Quitar de la ruleta</button>
+          <button class="dc-btn dc-btn--sm dc-btn--theme" type="button" id="againBtn"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Girar otra vez</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="dinamiclase.js"></script>
+    <script src="ruleta.js"></script>
+  </body>
+</html>

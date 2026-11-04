@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinamiclase · Herramientas didácticas gratuitas para docentes</title>
+    <meta name="description" content="Herramientas gratuitas para dinamizar tus clases: forma grupos, reparte temas, sortea turnos, crea historias y juega aprendiendo. Sin registros ni instalaciones.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Dinamiclase · Haz que tu clase aprenda jugando">
+    <meta property="og:description" content="Herramientas gratuitas para docentes: grupos aleatorios, ruleta, lotería, Story Icons, pizarra, pomodoro y más.">
+    <meta property="og:url" content="https://dinamiclase.org/">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <!-- Marca la página como "con JS" antes de pintar (evita parpadeos en las animaciones) -->
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramientas">Saltar a las herramientas</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Herramientas</a></li>
+            <li><a class="dc-nav__link" href="#como-funciona"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i> Cómo funciona</a></li>
+            <li><a class="dc-nav__link" href="#sugerencias"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Sugerencias</a></li>
+            <li><a class="dc-nav__link" href="#autor"><i class="bi bi-people-fill" aria-hidden="true"></i> Quiénes somos</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+
+      <!-- =============================================================
+           HERO
+           ============================================================= -->
+      <section class="dc-hero" aria-labelledby="hero-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow"  style="--x:4%;  --y:14%; --s:22px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-shape--wide dc-theme-blue"   style="--x:46%; --y:8%;  --s:30px; --d:-3s; --t:8s"></span>
+          <span class="dc-shape dc-shape--square dc-theme-pink" style="--x:92%; --y:12%; --s:20px; --d:-2s"></span>
+          <span class="dc-shape dc-shape--tri dc-theme-green"   style="--x:2%;  --y:78%; --s:26px; --d:-4s; --t:9s"></span>
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-purple"  style="--x:52%; --y:88%; --s:14px; --d:-5s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-yellow"   style="--x:40%; --y:62%; --s:26px; --d:-2s; --t:6s"></i>
+          <i class="bi bi-lightning-charge-fill dc-shape dc-theme-orange" style="--x:96%; --y:70%; --s:28px; --d:-1s"></i>
+          <i class="bi bi-puzzle-fill dc-shape dc-theme-teal"   style="--x:88%; --y:40%; --s:24px; --d:-6s; --t:10s"></i>
+        </div>
+
+        <div class="dc-container dc-hero__grid">
+          <div class="dc-reveal">
+            <p class="dc-eyebrow dc-theme-orange"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Hecho por docentes, para docentes</p>
+            <h1 class="dc-hero__title" id="hero-title">
+              Haz que tu clase<br>
+              <span class="dc-scribble">
+                <span class="dc-rotator" data-dc-rotate="aprenda jugando|participe|cree historias|se mueva">aprenda jugando</span>
+                <svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 14 C 60 4, 120 4, 170 10 S 260 18, 296 6"/></svg>
+              </span>
+            </h1>
+            <p class="dc-hero__lead">
+              Herramientas gratuitas para dinamizar tus clases: forma grupos, reparte temas, sortea turnos,
+              crea historias y repasa jugando. Ábrelas, proyéctalas y ¡a jugar!
+            </p>
+            <div class="dc-hero__actions">
+              <a class="dc-btn" href="#herramientas">Explorar herramientas <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <button class="dc-btn dc-btn--ghost" type="button" data-dc-surprise><i class="bi bi-dice-5-fill" aria-hidden="true"></i> Sorpréndeme</button>
+            </div>
+            <ul class="dc-hero__perks">
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> 100% gratis</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Sin registros</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Funciona en el proyector</li>
+            </ul>
+          </div>
+
+          <!-- Acceso rápido a las herramientas -->
+          <nav class="dc-quick dc-reveal" aria-labelledby="quick-title" style="--i:2">
+            <span class="dc-quick__tag" aria-hidden="true">¡Elige y juega!</span>
+            <h2 class="dc-quick__title" id="quick-title">Acceso rápido</h2>
+            <ul class="dc-quick__grid">
+              <li><a class="dc-quick__item dc-theme-blue" href="asignador-grupos.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span><span class="dc-quick__label">Grupos</span></a></li>
+              <li><a class="dc-quick__item dc-theme-purple" href="asignador-temas.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-journal-bookmark-fill"></i></span><span class="dc-quick__label">Temas</span></a></li>
+              <li><a class="dc-quick__item dc-theme-pink" href="storycube-normal.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-dice-3-fill"></i></span><span class="dc-quick__label">Story Icons</span></a></li>
+              <li><a class="dc-quick__item dc-theme-teal" href="storycube-por-lotes.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-person-hearts"></i></span><span class="dc-quick__label">Por lotes</span></a></li>
+              <li><a class="dc-quick__item dc-theme-red" href="loteria-app.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-suit-club-fill"></i></span><span class="dc-quick__label">Lotería</span></a></li>
+              <li><a class="dc-quick__item dc-theme-yellow" href="loteria-aleatoria.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-layers-fill"></i></span><span class="dc-quick__label">Una a una</span></a></li>
+              <li><a class="dc-quick__item dc-theme-green" href="ruleta.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-pie-chart-fill"></i></span><span class="dc-quick__label">Ruleta</span></a></li>
+              <li><a class="dc-quick__item dc-theme-cyan" href="preguntas-rompe-hielo.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span><span class="dc-quick__label">Preguntas</span></a></li>
+              <li><a class="dc-quick__item dc-theme-orange" href="pizarra.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-easel2-fill"></i></span><span class="dc-quick__label">Pizarra</span></a></li>
+              <li><a class="dc-quick__item dc-theme-red" href="pomodoro.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-stopwatch-fill"></i></span><span class="dc-quick__label">Pomodoro</span></a></li>
+            </ul>
+            <p class="dc-quick__foot"><i class="bi bi-dice-5-fill" aria-hidden="true"></i> ¿No sabes cuál elegir? <button class="dc-link-btn" type="button" data-dc-surprise>Tira el dado</button></p>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Estadísticas -->
+      <div class="dc-container">
+        <ul class="dc-stats" data-dc-stagger>
+          <li class="dc-stat dc-theme-blue dc-reveal">
+            <span class="dc-stat__icon" aria-hidden="true"><i class="bi bi-grid-fill"></i></span>
+            <span><span class="dc-stat__value" data-dc-count="10">10</span><span class="dc-stat__label">herramientas listas</span></span>
+          </li>
+          <li class="dc-stat dc-theme-green dc-reveal">
+            <span class="dc-stat__icon" aria-hidden="true"><i class="bi bi-gift-fill"></i></span>
+            <span><span class="dc-stat__value" data-dc-count="100" data-dc-suffix="%">100%</span><span class="dc-stat__label">gratis</span></span>
+          </li>
+          <li class="dc-stat dc-theme-pink dc-reveal">
+            <span class="dc-stat__icon" aria-hidden="true"><i class="bi bi-person-badge-fill"></i></span>
+            <span><span class="dc-stat__value">0</span><span class="dc-stat__label">registros ni descargas</span></span>
+          </li>
+          <li class="dc-stat dc-theme-yellow dc-reveal">
+            <span class="dc-stat__icon" aria-hidden="true"><i class="bi bi-display-fill"></i></span>
+            <span><span class="dc-stat__value">1 clic</span><span class="dc-stat__label">para proyectar en clase</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cinta animada -->
+      <div class="dc-ribbon-wrap" aria-hidden="true">
+      <div class="dc-ribbon">
+        <div class="dc-ribbon__track">
+          <ul class="dc-ribbon__list">
+            <li>Rompehielos</li><li>Debates</li><li>Repaso</li><li>Storytelling</li><li>Sorteos</li>
+            <li>Trabajo en equipo</li><li>Exposiciones</li><li>Concursos</li><li>Lluvia de ideas</li><li>Pausas activas</li>
+          </ul>
+          <ul class="dc-ribbon__list">
+            <li>Rompehielos</li><li>Debates</li><li>Repaso</li><li>Storytelling</li><li>Sorteos</li>
+            <li>Trabajo en equipo</li><li>Exposiciones</li><li>Concursos</li><li>Lluvia de ideas</li><li>Pausas activas</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      <!-- =============================================================
+           HERRAMIENTAS
+           ============================================================= -->
+      <section class="dc-section" id="herramientas" aria-labelledby="tools-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow dc-theme-blue"><i class="bi bi-box2-heart-fill" aria-hidden="true"></i> Caja de herramientas</p>
+            <h2 class="dc-title" id="tools-title">Herramientas didácticas para docentes</h2>
+            <p class="dc-lead">Elige una dinámica, ábrela y proyéctala en clase. Todas son <mark class="dc-mark">gratuitas</mark> y funcionan sin registro.</p>
+          </header>
+
+          <div class="dc-toolbar dc-reveal">
+            <div class="dc-filters" role="group" aria-label="Filtrar por categoría">
+              <button class="dc-chip" type="button" data-filter="all" aria-pressed="true"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> Todas <span class="dc-chip__count">10</span></button>
+              <button class="dc-chip dc-theme-blue" type="button" data-filter="organiza" aria-pressed="false"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza <span class="dc-chip__count">3</span></button>
+              <button class="dc-chip dc-theme-pink" type="button" data-filter="crea" aria-pressed="false"><i class="bi bi-palette-fill" aria-hidden="true"></i> Crea <span class="dc-chip__count">3</span></button>
+              <button class="dc-chip dc-theme-green" type="button" data-filter="juega" aria-pressed="false"><i class="bi bi-controller" aria-hidden="true"></i> Juega <span class="dc-chip__count">4</span></button>
+            </div>
+            <div class="dc-toolbar__end">
+              <label class="dc-search">
+                <span class="dc-visually-hidden">Buscar herramienta</span>
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" id="tool-search" placeholder="Busca: grupos, debate, repaso…" autocomplete="off">
+              </label>
+              <button class="dc-btn dc-btn--sm dc-btn--theme dc-theme-purple" type="button" data-dc-surprise><i class="bi bi-dice-5-fill" aria-hidden="true"></i> Herramienta sorpresa</button>
+            </div>
+          </div>
+
+          <p class="dc-results" id="tools-results" aria-live="polite"></p>
+
+          <div class="dc-tools" id="tools-grid" data-dc-stagger>
+
+            <!-- 1 · Grupos aleatorios -->
+            <article class="dc-tool dc-theme-blue dc-reveal" data-tool="grupos" data-cat="organiza" data-keywords="equipos planificacion aleatorios azar formar">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Organiza</span>
+              <h3 class="dc-tool__title">Grupos aleatorios</h3>
+              <p class="dc-tool__desc">Forma grupos de manera equitativa y aleatoria en segundos.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Equipos de trabajo</li><li>Rompehielos</li><li>Debates</li><li>Juegos de roles</li><li>Proyectos colaborativos</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="asignador-grupos.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 2 · Asignador de temas -->
+            <article class="dc-tool dc-theme-purple dc-reveal" data-tool="temas" data-cat="organiza" data-keywords="temas planificacion aleatorios repartir estudiantes">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-journal-bookmark-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Organiza</span>
+              <h3 class="dc-tool__title">Asignador de temas</h3>
+              <p class="dc-tool__desc">Distribuye temas de forma rápida y aleatoria para que cada estudiante trabaje un contenido distinto.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Exposiciones</li><li>Debates</li><li>Investigaciones</li><li>Presentaciones grupales</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="asignador-temas.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 3 · Story Icons -->
+            <article class="dc-tool dc-theme-pink dc-reveal" data-tool="story-icons" data-cat="crea" data-keywords="dados storytelling creatividad iconos relatos escritura">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-dice-3-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Crea</span>
+              <h3 class="dc-tool__title">Story Icons</h3>
+              <p class="dc-tool__desc">Íconos al azar que sirven como disparadores creativos para inventar relatos, situaciones o personajes.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Escritura creativa</li><li>Improvisación</li><li>Oratoria</li><li>Inicio de un debate</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="storycube-normal.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 4 · Story Icons por lotes -->
+            <article class="dc-tool dc-theme-teal dc-reveal" data-tool="story-lotes" data-cat="crea" data-keywords="dados storytelling grupos iconos historias equipos">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-person-hearts"></i></span>
+              </div>
+              <span class="dc-tool__cat">Crea</span>
+              <h3 class="dc-tool__title">Story Icons por lotes</h3>
+              <p class="dc-tool__desc">Asigna íconos únicos a varios estudiantes o equipos para que cada uno construya su propia versión de la historia.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Storytelling</li><li>Competencia amistosa</li><li>Talleres</li><li>Trabajo en equipo</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="storycube-por-lotes.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 5 · Lotería interactiva -->
+            <article class="dc-tool dc-theme-red dc-reveal" data-tool="loteria" data-cat="juega" data-keywords="loteria cartas aleatorios repaso concurso">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-suit-club-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Juega</span>
+              <h3 class="dc-tool__title">Lotería interactiva</h3>
+              <p class="dc-tool__desc">Una versión digital de la lotería tradicional en la que las cartas se revelan poco a poco.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Repaso</li><li>Rompehielos</li><li>Concurso de preguntas</li><li>Sorteos</li>
+              </ul>
+              <p class="dc-tool__tip"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Cada carta puede representar un reto, un concepto, una idea o una pista.</p>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="loteria-app.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 6 · Lotería una a una -->
+            <article class="dc-tool dc-theme-yellow dc-reveal" data-tool="loteria-una" data-cat="juega" data-keywords="loteria cartas aleatorios mazo sorteo retos">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-layers-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Juega</span>
+              <h3 class="dc-tool__title">Lotería una a una</h3>
+              <p class="dc-tool__desc">Simula el sorteo de un mazo: las cartas se revelan de una en una y al azar.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Concursos</li><li>Preguntas y respuestas</li><li>Selección de retos</li><li>Repaso</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="loteria-aleatoria.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 7 · Ruleta de sorteos -->
+            <article class="dc-tool dc-theme-green dc-reveal" data-tool="ruleta" data-cat="juega" data-keywords="ruleta sorteo aleatorios turnos ganadores">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-pie-chart-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Juega</span>
+              <h3 class="dc-tool__title">Ruleta de sorteos</h3>
+              <p class="dc-tool__desc">Una ruleta digital que elige participantes al azar de forma divertida, visual e imparcial.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Asignar turnos</li><li>Elegir ganadores</li><li>¿Quién empieza?</li><li>Repartir tareas</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="ruleta.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 8 · Preguntas rompe-hielo -->
+            <article class="dc-tool dc-theme-cyan dc-reveal" data-tool="preguntas" data-cat="juega" data-keywords="preguntas aleatorias rompe-hielo rompehielo integracion participacion">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Juega</span>
+              <h3 class="dc-tool__title">Preguntas rompe-hielo</h3>
+              <p class="dc-tool__desc">Preguntas rápidas y divertidas que aparecen al azar para animar al grupo.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Inicio de clase</li><li>Integración</li><li>Dinámicas de confianza</li><li>Pausa activa</li>
+              </ul>
+              <p class="dc-tool__tip"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> ¡Piensa rápido! Pon un límite de tiempo para fomentar el pensamiento veloz.</p>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="preguntas-rompe-hielo.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 9 · Pizarra de dibujo -->
+            <article class="dc-tool dc-theme-orange dc-reveal" data-tool="pizarra" data-cat="crea" data-keywords="pizarra dibujo diagrama esquema dibujar">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-easel2-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Crea</span>
+              <h3 class="dc-tool__title">Pizarra de dibujo</h3>
+              <p class="dc-tool__desc">Dibuja, borra y comparte tus creaciones en una pizarra digital.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Explicar conceptos</li><li>Esquemas</li><li>Lluvia de ideas</li><li>Diagramas</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="pizarra.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 10 · Técnica Pomodoro -->
+            <article class="dc-tool dc-theme-red dc-reveal" data-tool="pomodoro" data-cat="organiza" data-keywords="pomodoro enfoque concentracion tiempo temporizador descanso">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-stopwatch-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Organiza</span>
+              <h3 class="dc-tool__title">Técnica Pomodoro</h3>
+              <p class="dc-tool__desc">Gestiona el tiempo: 25 minutos de concentración y 5 de descanso, o la configuración que prefieras.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Enfoque</li><li>Concentración</li><li>Trabajo autónomo</li><li>Sesiones de estudio</li>
+              </ul>
+              <p class="dc-tool__tip"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Activa las notificaciones de este sitio para que te avise al terminar cada ciclo.</p>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="pomodoro.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- Tarjetas especiales (no son herramientas: no se filtran) -->
+            <article class="dc-tool dc-tool--special dc-theme-purple dc-reveal">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-dice-5-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Sorpresa</span>
+              <h3 class="dc-tool__title">¿No sabes cuál elegir?</h3>
+              <p class="dc-tool__desc">Tira el dado y deja que el azar elija la dinámica de hoy. ¡Puede que descubras tu nueva favorita!</p>
+              <div class="dc-tool__cta-wrap">
+                <button class="dc-tool__cta" type="button" data-dc-surprise>Tirar el dado <i class="bi bi-dice-5-fill" aria-hidden="true"></i></button>
+              </div>
+            </article>
+
+            <article class="dc-tool dc-tool--special dc-theme-yellow dc-reveal">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-lightbulb-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Misión</span>
+              <h3 class="dc-tool__title">¿Te falta una herramienta?</h3>
+              <p class="dc-tool__desc">Cuéntanos qué necesitas en tu aula. Tu idea podría ser la próxima en esta caja de herramientas.</p>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="#sugerencias">Proponer una idea <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="dc-empty" id="tools-empty" hidden>
+            <span class="dc-empty__icon" aria-hidden="true">🙈</span>
+            <h3>No encontramos esa herramienta</h3>
+            <p>Prueba con otra palabra o cuéntanos qué necesitas en la sección de sugerencias.</p>
+            <button class="dc-btn dc-btn--sm dc-btn--ghost" type="button" data-dc-clear-filters><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Ver todas</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           CÓMO FUNCIONA
+           ============================================================= -->
+      <section class="dc-section dc-section--tinted" id="como-funciona" aria-labelledby="steps-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow dc-theme-green"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i> Así de fácil</p>
+            <h2 class="dc-title" id="steps-title">Tu clase dinámica en 3 pasos</h2>
+            <p class="dc-lead">Todas las herramientas tienen un enfoque lúdico y pedagógico: te ayudan a planificar, dinamizar actividades y fomentar la creatividad.</p>
+          </header>
+
+          <ol class="dc-steps" data-dc-stagger>
+            <li class="dc-step dc-theme-blue dc-reveal">
+              <span class="dc-step__icon" aria-hidden="true"><i class="bi bi-hand-index-thumb-fill"></i><span class="dc-step__num">1</span></span>
+              <h3>Elige</h3>
+              <p>Busca la dinámica que necesitas: formar grupos, sortear turnos, crear historias o repasar jugando.</p>
+            </li>
+            <li class="dc-step dc-theme-pink dc-reveal">
+              <span class="dc-step__icon" aria-hidden="true"><i class="bi bi-display-fill"></i><span class="dc-step__num">2</span></span>
+              <h3>Proyecta</h3>
+              <p>Ábrela en el navegador y muéstrala en la pantalla o el proyector. Sin instalar nada.</p>
+            </li>
+            <li class="dc-step dc-theme-yellow dc-reveal">
+              <span class="dc-step__icon" aria-hidden="true"><i class="bi bi-balloon-heart-fill"></i><span class="dc-step__num">3</span></span>
+              <h3>¡A jugar!</h3>
+              <p>Tu grupo participa, se divierte y aprende jugando. ¡Así de simple!</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           SUGERENCIAS (misión)
+           ============================================================= -->
+      <section class="dc-section" id="sugerencias" aria-labelledby="suggest-title">
+        <div class="dc-container">
+          <div class="dc-mission dc-theme-purple dc-reveal">
+            <div>
+              <p class="dc-eyebrow"><i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i> Misión especial</p>
+              <h2 id="suggest-title">¿Qué herramienta te habría gustado tener cuando empezaste a dar clases?</h2>
+              <p>Este proyecto crece con tus ideas. Queremos que Dinamiclase sea un espacio hecho por docentes para docentes.</p>
+              <ul class="dc-checklist">
+                <li><span aria-hidden="true">1</span> Cuéntanos tu idea</li>
+                <li><span aria-hidden="true">2</span> La leemos con atención</li>
+                <li><span aria-hidden="true">3</span> ¡Podría ser la próxima herramienta!</li>
+              </ul>
+            </div>
+
+            <form class="dc-form" action="https://formspree.io/f/mqayalrk" method="POST" data-dc-suggest>
+              <div data-dc-form-fields>
+                <label class="dc-field">
+                  <span class="dc-field__label">Tu correo</span>
+                  <input class="dc-input" type="email" name="email" required autocomplete="email" placeholder="nombre@escuela.edu">
+                </label>
+                <label class="dc-field">
+                  <span class="dc-field__label">Tu sugerencia</span>
+                  <textarea class="dc-input" name="message" required placeholder="Me encantaría una herramienta que…"></textarea>
+                </label>
+                <!-- Anti-spam de Formspree -->
+                <input type="text" name="_gotcha" class="dc-visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button class="dc-btn dc-btn--block" type="submit">Enviar sugerencia <i class="bi bi-send-fill" aria-hidden="true"></i></button>
+                <p class="dc-form__status" role="status" aria-live="polite"></p>
+              </div>
+
+              <div class="dc-form__success" data-dc-form-success hidden>
+                <span class="dc-form__success-icon" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+                <h3 tabindex="-1">¡Misión cumplida!</h3>
+                <p>Recibimos tu idea. ¡Gracias por ayudarnos a crecer!</p>
+                <button class="dc-btn dc-btn--sm dc-btn--ghost" type="button" data-dc-form-again><i class="bi bi-plus-lg" aria-hidden="true"></i> Enviar otra idea</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           AUTORES
+           ============================================================= -->
+      <section class="dc-section" id="autor" aria-labelledby="team-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow dc-theme-pink"><i class="bi bi-heart-fill" aria-hidden="true"></i> Quiénes somos</p>
+            <h2 class="dc-title" id="team-title">De formadores para formadores</h2>
+            <p class="dc-lead">
+              Creamos este proyecto tras años de experiencia en la docencia, que nos enseñó que la mejor forma de aprender
+              es jugando y creando. Por eso apostamos por la gamificación y la creatividad como motores de la educación.
+            </p>
+          </header>
+
+          <div class="dc-team" data-dc-stagger>
+            <article class="dc-person dc-theme-orange dc-reveal">
+              <span class="dc-person__avatar" aria-hidden="true">OS</span>
+              <div>
+                <h3>Oscar Sandoval</h3>
+                <p class="dc-person__role">Diseño e ilustración</p>
+                <a class="dc-person__mail" href="mailto:obsandoval93@gmail.com"><i class="bi bi-envelope-fill" aria-hidden="true"></i> obsandoval93@gmail.com</a>
+              </div>
+            </article>
+            <article class="dc-person dc-theme-purple dc-reveal">
+              <span class="dc-person__avatar" aria-hidden="true">RG</span>
+              <div>
+                <h3>Raquel Guillen</h3>
+                <p class="dc-person__role">Docente, estratega y redactora</p>
+                <a class="dc-person__mail" href="mailto:raquelguillen@outlook.com"><i class="bi bi-envelope-fill" aria-hidden="true"></i> raquelguillen@outlook.com</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <!-- =============================================================
+         DIÁLOGO: HERRAMIENTA SORPRESA
+         ============================================================= -->
+    <dialog class="dc-dialog" id="surprise" aria-labelledby="surprise-title">
+      <div class="dc-dialog__card dc-theme-purple">
+        <button class="dc-dialog__close" type="button" data-dc-close aria-label="Cerrar"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+        <p class="dc-eyebrow"><i class="bi bi-dice-5-fill" aria-hidden="true"></i> Herramienta sorpresa</p>
+        <h2 id="surprise-title">¡Tira el dado!</h2>
+        <div class="dc-slot">
+          <span class="dc-slot__icon" aria-hidden="true"><i class="bi bi-dice-5-fill"></i></span>
+          <p class="dc-slot__name" aria-hidden="true">…</p>
+        </div>
+        <p class="dc-slot__desc" aria-hidden="true"></p>
+        <p class="dc-visually-hidden" data-dc-slot-live aria-live="polite"></p>
+        <div class="dc-dialog__actions">
+          <button class="dc-btn dc-btn--sm dc-btn--ghost" type="button" data-dc-reroll><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Otra vez</button>
+          <a class="dc-btn dc-btn--sm dc-btn--theme" href="#herramientas" data-dc-go>¡Vamos! <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="dinamiclase.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

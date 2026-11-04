@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grupos aleatorios · Dinamiclase</title>
+    <meta name="description" content="Forma grupos aleatorios y equilibrados en segundos: pega la lista de nombres, elige el tamaño o el número de grupos y listo. Gratis y sin registros.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/asignador-grupos.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Grupos aleatorios · Dinamiclase">
+    <meta property="og:description" content="Forma grupos aleatorios y equilibrados en segundos: pega la lista de nombres, elige el tamaño o el número de grupos y listo. Gratis y sin registros.">
+    <meta property="og:url" content="https://dinamiclase.org/asignador-grupos.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-people-fill" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-blue" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-blue" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Grupos aleatorios</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Grupos aleatorios</h1>
+              <p class="dc-toolhero__lead">Pega una lista de nombres y forma grupos equilibrados al azar en segundos. Ideal para equipos de trabajo, debates, juegos de roles y proyectos colaborativos.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Pega la lista de nombres</li><li>Elige personas o número de grupos</li><li>¡Forma los grupos!</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-blue" id="herramienta" aria-label="Grupos aleatorios">
+        <div class="dc-container">
+          <div class="dc-split">
+            <!-- Configuración -->
+            <div class="dc-panel dc-stack dc-sticky">
+              <div class="dc-field">
+                <div class="dc-field__head">
+                  <label class="dc-field__label" for="nombres"><span class="dc-num">1</span> Lista de nombres</label>
+                  <span class="dc-counter" id="namesCount">0 nombres</span>
+                </div>
+                <textarea id="nombres" class="dc-input dc-input--list" data-dc-persist="lista-estudiantes" spellcheck="false"
+        placeholder="Un nombre por línea, por ejemplo:&#10;Ana López&#10;Bruno Díaz&#10;Carla Méndez"></textarea>
+                <p class="dc-field__hint"><i class="bi bi-floppy-fill" aria-hidden="true"></i> Se guarda en este navegador y la usan otras herramientas.
+                  <button class="dc-link-btn" type="button" id="btn-ejemplo">Usar ejemplo</button></p>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">2</span> ¿Cómo formar los grupos?</span>
+                <div class="dc-segmented dc-segmented--block" role="radiogroup" aria-label="Forma de agrupar">
+                  <label><input type="radio" name="modo" value="tamano" checked><span><i class="bi bi-person-fill" aria-hidden="true"></i> Personas por grupo</span></label>
+                  <label><input type="radio" name="modo" value="cantidad"><span><i class="bi bi-grid-fill" aria-hidden="true"></i> Número de grupos</span></label>
+                </div>
+                <div class="dc-row">
+                  <div class="dc-stepper" data-dc-stepper>
+                    <button type="button" data-step="-1" aria-label="Disminuir">−</button>
+                    <input id="valor" type="number" min="1" max="99" value="4" inputmode="numeric" aria-label="Personas por grupo" data-dc-persist="grupos-valor">
+                    <button type="button" data-step="1" aria-label="Aumentar">+</button>
+                  </div>
+                  <p class="dc-muted dc-small" id="preview" aria-live="polite" style="margin:0"></p>
+                </div>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">3</span> Extras</span>
+                <label class="dc-switch"><input type="checkbox" id="lider" data-dc-persist="grupos-lider"><span class="dc-switch__track"></span><span>Elegir coordinador/a <small>Una persona al azar en cada grupo</small></span></label>
+                <label class="dc-switch"><input type="checkbox" id="divertidos" checked data-dc-persist="grupos-divertidos"><span class="dc-switch__track"></span><span>Nombres de equipo divertidos <small>Cohetes, Dragones, Cometas…</small></span></label>
+              </div>
+
+              <button class="dc-btn dc-btn--block" id="btn-crear" type="button"><i class="bi bi-shuffle" aria-hidden="true"></i> ¡Formar grupos!</button>
+              <p class="dc-field__hint dc-kbd-hint" style="margin:0;text-align:center">Atajo: <kbd class="dc-kbd">Ctrl</kbd> + <kbd class="dc-kbd">Enter</kbd></p>
+            </div>
+
+            <!-- Resultados -->
+            <div class="dc-panel dc-stage" id="stage">
+              <div class="dc-stagebar">
+                <h2 class="dc-stagebar__title" id="resTitle">Grupos</h2>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-icon-btn" id="btn-mezclar" type="button" title="Volver a mezclar" aria-label="Volver a mezclar" disabled><i class="bi bi-arrow-repeat" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" id="btn-copiar" type="button" title="Copiar grupos" aria-label="Copiar grupos" disabled><i class="bi bi-clipboard" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+              <div id="resultados" aria-live="polite">
+                <div class="dc-placeholder">
+                  <i class="bi bi-people-fill" aria-hidden="true"></i>
+                  <p>Escribe los nombres y pulsa <strong>¡Formar grupos!</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-blue" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-chat-dots-fill"></i></span>
+              <h3>Debate exprés</h3>
+              <p>Forma grupos de 3 o 4, da a cada uno una postura y 5 minutos para preparar sus argumentos.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-puzzle-fill"></i></span>
+              <h3>Rompecabezas</h3>
+              <p>Cada integrante investiga una parte del tema y después se la explica al resto de su grupo.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-arrow-repeat"></i></span>
+              <h3>Rotación de equipos</h3>
+              <p>Vuelve a mezclar en cada unidad para que todos aprendan a trabajar con personas distintas.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-orange"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-purple dc-reveal" href="asignador-temas.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-journal-bookmark-fill"></i></span>
+              <span><strong>Asignador de temas</strong><span class="dc-mini-tool__desc">Reparte temas entre tus estudiantes.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-green dc-reveal" href="ruleta.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-pie-chart-fill"></i></span>
+              <span><strong>Ruleta de sorteos</strong><span class="dc-mini-tool__desc">Gira y elige al azar.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-cyan dc-reveal" href="preguntas-rompe-hielo.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+              <span><strong>Preguntas rompe-hielo</strong><span class="dc-mini-tool__desc">Preguntas para animar al grupo.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="asignador.js"></script>
+  </body>
+</html>
