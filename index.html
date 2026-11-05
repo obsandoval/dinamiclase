@@ -52,6 +52,7 @@
         <nav class="dc-nav__nav" aria-label="Principal">
           <ul class="dc-nav__menu" id="dc-menu">
             <li><a class="dc-nav__link" href="#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Herramientas</a></li>
+            <li><a class="dc-nav__link" href="#mi-lista"><i class="bi bi-person-lines-fill" aria-hidden="true"></i> Mi lista</a></li>
             <li><a class="dc-nav__link" href="#como-funciona"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i> Cómo funciona</a></li>
             <li><a class="dc-nav__link" href="#sugerencias"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Sugerencias</a></li>
             <li><a class="dc-nav__link" href="#autor"><i class="bi bi-people-fill" aria-hidden="true"></i> Quiénes somos</a></li>
@@ -127,9 +128,11 @@
               <li><a class="dc-quick__item dc-theme-purple" href="palabra-secreta.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-alphabet-uppercase"></i></span><span class="dc-quick__label">Palabra secreta</span></a></li>
               <li><a class="dc-quick__item dc-theme-teal" href="tangram.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-puzzle-fill"></i></span><span class="dc-quick__label">Tangram</span></a></li>
               <li><a class="dc-quick__item dc-theme-blue" href="sudoku.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-grid-3x3"></i></span><span class="dc-quick__label">Sudoku</span></a></li>
-              <li><a class="dc-quick__item dc-theme-yellow" href="semaforo-ruido.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-stoplights-fill"></i></span><span class="dc-quick__label">Semáforo</span></a></li>
               <li><a class="dc-quick__item dc-theme-pink" href="cadaver-exquisito.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-pen-fill"></i></span><span class="dc-quick__label">Cadáver exquisito</span></a></li>
               <li><a class="dc-quick__item dc-theme-cyan" href="mapa-asientos.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-person-workspace"></i></span><span class="dc-quick__label">Asientos</span></a></li>
+              <li><a class="dc-quick__item dc-theme-green" href="sopa-de-letras.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-search"></i></span><span class="dc-quick__label">Sopa de letras</span></a></li>
+              <li><a class="dc-quick__item dc-theme-indigo" href="crucigrama.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-border-all"></i></span><span class="dc-quick__label">Crucigrama</span></a></li>
+              <li><a class="dc-quick__item dc-theme-orange" href="bombo-sorteo.html"><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-record-circle-fill"></i></span><span class="dc-quick__label">Bombo</span></a></li>
               <li><button class="dc-quick__item dc-theme-purple" type="button" data-dc-surprise><span class="dc-quick__icon" aria-hidden="true"><i class="bi bi-dice-5-fill"></i></span><span class="dc-quick__label">¡Sorpresa!</span></button></li>
             </ul>
           </nav>
@@ -141,7 +144,7 @@
         <ul class="dc-stats" data-dc-stagger>
           <li class="dc-stat dc-theme-blue dc-reveal">
             <span class="dc-stat__icon" aria-hidden="true"><i class="bi bi-grid-fill"></i></span>
-            <span><span class="dc-stat__value" data-dc-count="18">18</span><span class="dc-stat__label">herramientas listas</span></span>
+            <span><span class="dc-stat__value" data-dc-count="20">20</span><span class="dc-stat__label">herramientas listas</span></span>
           </li>
           <li class="dc-stat dc-theme-green dc-reveal">
             <span class="dc-stat__icon" aria-hidden="true"><i class="bi bi-gift-fill"></i></span>
@@ -187,10 +190,10 @@
 
           <div class="dc-toolbar dc-reveal">
             <div class="dc-filters" role="group" aria-label="Filtrar por categoría">
-              <button class="dc-chip" type="button" data-filter="all" aria-pressed="true"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> Todas <span class="dc-chip__count">18</span></button>
-              <button class="dc-chip dc-theme-blue" type="button" data-filter="organiza" aria-pressed="false"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza <span class="dc-chip__count">6</span></button>
-              <button class="dc-chip dc-theme-pink" type="button" data-filter="crea" aria-pressed="false"><i class="bi bi-palette-fill" aria-hidden="true"></i> Crea <span class="dc-chip__count">5</span></button>
-              <button class="dc-chip dc-theme-green" type="button" data-filter="juega" aria-pressed="false"><i class="bi bi-controller" aria-hidden="true"></i> Juega <span class="dc-chip__count">7</span></button>
+              <button class="dc-chip" type="button" data-filter="all" aria-pressed="true"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> Todas <span class="dc-chip__count">20</span></button>
+              <button class="dc-chip dc-theme-blue" type="button" data-filter="organiza" aria-pressed="false"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza <span class="dc-chip__count">5</span></button>
+              <button class="dc-chip dc-theme-pink" type="button" data-filter="crea" aria-pressed="false"><i class="bi bi-palette-fill" aria-hidden="true"></i> Crea <span class="dc-chip__count">7</span></button>
+              <button class="dc-chip dc-theme-green" type="button" data-filter="juega" aria-pressed="false"><i class="bi bi-controller" aria-hidden="true"></i> Juega <span class="dc-chip__count">8</span></button>
             </div>
             <div class="dc-toolbar__end">
               <label class="dc-search">
@@ -468,25 +471,7 @@
               </div>
             </article>
 
-            <!-- 16 · Semáforo de ruido -->
-            <article class="dc-tool dc-theme-yellow dc-reveal" data-tool="semaforo-ruido" data-cat="organiza" data-keywords="ruido volumen silencio microfono semaforo sonido convivencia">
-              <div class="dc-tool__top">
-                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-stoplights-fill"></i></span>
-              </div>
-              <span class="dc-tool__cat">Organiza</span>
-              <h3 class="dc-tool__title">Semáforo de ruido</h3>
-              <p class="dc-tool__desc">Escucha por el micrófono y pasa de verde a rojo según el volumen del aula. El sonido no se graba ni se envía.</p>
-              <p class="dc-tool__label">Ideal para</p>
-              <ul class="dc-tool__uses">
-                <li>Trabajo en silencio</li><li>Exámenes</li><li>Trabajo en equipo</li><li>Autorregulación</li>
-              </ul>
-              <p class="dc-tool__tip"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ajusta los límites con el grupo en silencio y hablando.</p>
-              <div class="dc-tool__cta-wrap">
-                <a class="dc-tool__cta" href="semaforo-ruido.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-              </div>
-            </article>
-
-            <!-- 17 · Cadáver exquisito -->
+            <!-- 16 · Cadáver exquisito -->
             <article class="dc-tool dc-theme-pink dc-reveal" data-tool="cadaver-exquisito" data-cat="crea" data-keywords="cadaver exquisito historia colectiva escritura cuento creatividad frases">
               <div class="dc-tool__top">
                 <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-pen-fill"></i></span>
@@ -503,7 +488,7 @@
               </div>
             </article>
 
-            <!-- 18 · Mapa de asientos -->
+            <!-- 17 · Mapa de asientos -->
             <article class="dc-tool dc-theme-cyan dc-reveal" data-tool="mapa-asientos" data-cat="organiza" data-keywords="asientos pupitres lugares salon acomodar sentar mapa imprimir aleatorio">
               <div class="dc-tool__top">
                 <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-person-workspace"></i></span>
@@ -517,6 +502,59 @@
               </ul>
               <div class="dc-tool__cta-wrap">
                 <a class="dc-tool__cta" href="mapa-asientos.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 18 · Sopa de letras -->
+            <article class="dc-tool dc-theme-green dc-reveal" data-tool="sopa-de-letras" data-cat="crea" data-keywords="sopa letras palabras ficha imprimir vocabulario buscar">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-search"></i></span>
+              </div>
+              <span class="dc-tool__cat">Crea</span>
+              <h3 class="dc-tool__title">Sopa de letras</h3>
+              <p class="dc-tool__desc">Crea sopas de letras con tus palabras para imprimir (con su solución) o resolver en el proyector.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Vocabulario</li><li>Ortografía</li><li>Idiomas</li><li>Fichas de repaso</li>
+              </ul>
+              <p class="dc-tool__tip"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Escribe «palabra - pista» y la ficha mostrará la pista en lugar de la palabra.</p>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="sopa-de-letras.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 19 · Crucigrama -->
+            <article class="dc-tool dc-theme-indigo dc-reveal" data-tool="crucigrama" data-cat="crea" data-keywords="crucigrama palabras pistas definiciones ficha imprimir glosario">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-border-all"></i></span>
+              </div>
+              <span class="dc-tool__cat">Crea</span>
+              <h3 class="dc-tool__title">Crucigrama</h3>
+              <p class="dc-tool__desc">Escribe palabras con sus pistas y el crucigrama se arma solo. Resuélvelo en pantalla o imprímelo.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Glosarios</li><li>Definiciones</li><li>Repaso de unidad</li><li>Fichas impresas</li>
+              </ul>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="crucigrama.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 20 · Bombo de sorteos -->
+            <article class="dc-tool dc-theme-orange dc-reveal" data-tool="bombo-sorteo" data-cat="juega" data-keywords="bombo sorteo bolas loteria bingo azar numeros nombres fisica">
+              <div class="dc-tool__top">
+                <span class="dc-tool__icon" aria-hidden="true"><i class="bi bi-record-circle-fill"></i></span>
+              </div>
+              <span class="dc-tool__cat">Juega</span>
+              <h3 class="dc-tool__title">Bombo de sorteos</h3>
+              <p class="dc-tool__desc">Un bombo con física de verdad: las bolas con nombres o números giran y una sale al azar.</p>
+              <p class="dc-tool__label">Ideal para</p>
+              <ul class="dc-tool__uses">
+                <li>Sorteos</li><li>Turnos</li><li>Bingo</li><li>Repartir tareas</li>
+              </ul>
+              <p class="dc-tool__tip"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Activa «Sacarla del bombo» para que ninguna bola salga dos veces.</p>
+              <div class="dc-tool__cta-wrap">
+                <a class="dc-tool__cta" href="bombo-sorteo.html">Abrir herramienta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
               </div>
             </article>
 
@@ -541,6 +579,50 @@
             <h3>No encontramos esa herramienta</h3>
             <p>Prueba con otra palabra o cuéntanos qué necesitas en la sección de sugerencias.</p>
             <button class="dc-btn dc-btn--sm dc-btn--ghost" type="button" data-dc-clear-filters><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Ver todas</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           MI LISTA DE ESTUDIANTES (la usan varias herramientas)
+           ============================================================= -->
+      <section class="dc-section dc-section--tinted" id="mi-lista" aria-labelledby="list-title">
+        <div class="dc-container">
+          <div class="dc-mylist dc-theme-blue dc-reveal">
+            <div class="dc-mylist__intro">
+              <p class="dc-eyebrow"><i class="bi bi-person-lines-fill" aria-hidden="true"></i> Mi grupo</p>
+              <h2 class="dc-title" id="list-title">Tu lista de estudiantes, una sola vez</h2>
+              <p class="dc-lead">Escríbela aquí y la encontrarás lista en todas las herramientas que usan nombres. Si la cambias dentro de una herramienta, también se actualiza aquí.</p>
+              <p class="dc-mylist__label">Se usa en:</p>
+              <ul class="dc-mylist__tools">
+                <li><a class="dc-mylist__tool dc-theme-blue" href="asignador-grupos.html"><i class="bi bi-people-fill" aria-hidden="true"></i> Grupos aleatorios</a></li>
+                <li><a class="dc-mylist__tool dc-theme-purple" href="asignador-temas.html"><i class="bi bi-journal-bookmark-fill" aria-hidden="true"></i> Asignador de temas</a></li>
+                <li><a class="dc-mylist__tool dc-theme-teal" href="storycube-por-lotes.html"><i class="bi bi-person-hearts" aria-hidden="true"></i> Story Icons por lotes</a></li>
+                <li><a class="dc-mylist__tool dc-theme-green" href="ruleta.html"><i class="bi bi-pie-chart-fill" aria-hidden="true"></i> Ruleta de sorteos</a></li>
+                <li><a class="dc-mylist__tool dc-theme-cyan" href="preguntas-rompe-hielo.html"><i class="bi bi-chat-quote-fill" aria-hidden="true"></i> Preguntas rompe-hielo</a></li>
+                <li><a class="dc-mylist__tool dc-theme-pink" href="cadaver-exquisito.html"><i class="bi bi-pen-fill" aria-hidden="true"></i> Cadáver exquisito</a></li>
+                <li><a class="dc-mylist__tool dc-theme-indigo" href="mapa-asientos.html"><i class="bi bi-person-workspace" aria-hidden="true"></i> Mapa de asientos</a></li>
+                <li><a class="dc-mylist__tool dc-theme-orange" href="bombo-sorteo.html"><i class="bi bi-record-circle-fill" aria-hidden="true"></i> Bombo de sorteos</a></li>
+              </ul>
+              <p class="dc-mylist__privacy"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Se guarda solo en este navegador: no se envía a ningún sitio. En otra computadora tendrás que escribirla de nuevo.</p>
+            </div>
+
+            <div class="dc-mylist__editor">
+              <div class="dc-field__head">
+                <label class="dc-field__label" for="myList">Un nombre por línea</label>
+                <span class="dc-counter" id="myListCount">0 estudiantes</span>
+              </div>
+              <textarea id="myList" class="dc-input dc-input--list dc-mylist__input" data-dc-persist="lista-estudiantes" spellcheck="false" autocomplete="off"
+                placeholder="Ana López&#10;Bruno Díaz&#10;Carla Méndez&#10;…&#10;&#10;También puedes pegar una columna de Excel o de Google Sheets."></textarea>
+              <div class="dc-row dc-mylist__actions">
+                <button class="dc-tbtn" type="button" id="listImport"><i class="bi bi-file-earmark-arrow-up-fill" aria-hidden="true"></i> Importar .txt o .csv</button>
+                <input type="file" id="listFile" accept=".txt,.csv,text/plain,text/csv" hidden>
+                <button class="dc-tbtn" type="button" id="listSort"><i class="bi bi-sort-alpha-down" aria-hidden="true"></i> Ordenar A–Z</button>
+                <button class="dc-tbtn" type="button" id="listClean"><i class="bi bi-magic" aria-hidden="true"></i> Quitar repetidos</button>
+                <button class="dc-tbtn" type="button" id="listClear"><i class="bi bi-trash3" aria-hidden="true"></i> Borrar</button>
+              </div>
+              <p class="dc-field__hint" id="myListStatus" aria-live="polite"><i class="bi bi-floppy-fill" aria-hidden="true"></i> Se guarda automáticamente.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -686,9 +768,11 @@
             <li><a href="palabra-secreta.html">Palabra secreta</a></li>
             <li><a href="tangram.html">Tangram</a></li>
             <li><a href="sudoku.html">Sudoku</a></li>
-            <li><a href="semaforo-ruido.html">Semáforo de ruido</a></li>
             <li><a href="cadaver-exquisito.html">Cadáver exquisito</a></li>
             <li><a href="mapa-asientos.html">Mapa de asientos</a></li>
+            <li><a href="sopa-de-letras.html">Sopa de letras</a></li>
+            <li><a href="crucigrama.html">Crucigrama</a></li>
+            <li><a href="bombo-sorteo.html">Bombo de sorteos</a></li>
           </ul>
         </nav>
         <div>

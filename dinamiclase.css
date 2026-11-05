@@ -609,8 +609,11 @@ html {
   box-shadow: 0 4px 0 var(--c);
   transition: background-color .2s ease, color .2s ease;
 }
-/* Si el último elemento dejaría un hueco suelto en la fila, ocupa dos columnas */
+/* El último elemento («¡Sorpresa!») ocupa los huecos que queden en la última fila */
 .dc-quick__grid > li:last-child:nth-child(5n + 4) { grid-column: span 2; }
+.dc-quick__grid > li:last-child:nth-child(5n + 3) { grid-column: span 3; }
+.dc-quick__grid > li:last-child:nth-child(5n + 2) { grid-column: span 4; }
+.dc-quick__grid > li:last-child:nth-child(5n + 1):not(:first-child) { grid-column: span 5; }
 button.dc-quick__item { width: 100%; padding: 0; border: 0; background: none; font-family: inherit; cursor: pointer; }
 .dc-quick__item:hover, .dc-quick__item:focus-visible { transform: translateY(-4px) rotate(-3deg); color: var(--c-dark); }
 .dc-quick__item:hover .dc-quick__icon, .dc-quick__item:focus-visible .dc-quick__icon {
@@ -1079,6 +1082,43 @@ textarea.dc-input { min-height: 150px; resize: vertical; }
 
 @media (max-width: 860px) { .dc-mission { grid-template-columns: 1fr; } }
 
+
+/* Mi lista de estudiantes (portada) */
+.dc-mylist {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding: clamp(1.4rem, 4vw, 2.75rem);
+  border: 3px solid var(--dc-ink);
+  border-radius: var(--dc-r-lg);
+  background: var(--dc-surface);
+  box-shadow: 8px 8px 0 var(--dc-ink);
+}
+.dc-mylist__intro .dc-title { margin-top: .6rem; }
+.dc-mylist__label { margin: 1.25rem 0 .55rem; color: var(--dc-ink); font-weight: 800; }
+.dc-mylist__tools { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.dc-mylist__tool {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .75rem;
+  border: 2px solid transparent;
+  border-radius: var(--dc-r-pill);
+  background: var(--c-soft);
+  color: var(--c-dark);
+  font-size: .86rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s var(--dc-bounce);
+}
+.dc-mylist__tool:hover, .dc-mylist__tool:focus-visible { border-color: var(--c); transform: translateY(-2px); }
+.dc-mylist__privacy { display: flex; gap: .5rem; margin: 1.25rem 0 0; color: var(--dc-ink-2); font-size: .9rem; font-weight: 600; }
+.dc-mylist__privacy i { color: var(--dc-green-dark); }
+.dc-mylist__input { min-height: 280px; }
+.dc-mylist__actions { gap: .5rem; margin-top: .75rem; }
+.dc-mylist .dc-counter.is-warn { background: var(--dc-yellow-soft); color: var(--dc-yellow-dark); }
+#myListStatus.is-ok { color: var(--dc-green-dark); }
+@media (max-width: 860px) { .dc-mylist { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------------------------------------------------------------------
    12. EQUIPO

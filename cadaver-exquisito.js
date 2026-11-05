@@ -43,7 +43,7 @@
   $('#useStudents').addEventListener('click', () => {
     const list = parseList(store.get('lista-estudiantes', ''));
     if (!list.length) {
-      DC.toast({ title: 'Aún no tienes una lista', text: 'Escribe tu lista de estudiantes en Grupos aleatorios y estará disponible aquí.', icon: 'bi-people-fill', theme: 'blue' });
+      DC.toast({ title: 'Aún no tienes una lista', text: 'Escríbela en «Mi lista», en la página de inicio, y estará disponible aquí.', icon: 'bi-people-fill', theme: 'blue' });
       return;
     }
     playersEl.value = list.join('\n');

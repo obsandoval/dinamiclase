@@ -79,7 +79,6 @@
     "Si pudieras inventar un día feriado con asueto ¿Cuál sería?",
     "Si te obligaran a comer una sola cosa por el resto de tu vida ¿Qué pedirías?",
     "Si pudieras tener un dinosaurio de mascota ¿Cuál sería?",
-    "¿Qué país crees que va a iniciar una tercera guerra mundial?",
     "¿Qué comida sencilla te sabe a lujo?",
     "¿Qué cosas normales se vuelven más aterradoras por la noche?",
     "Si pudieras tener un cuarto de juegos ¿Qué tendría?",

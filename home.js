@@ -240,3 +240,119 @@
     }));
   }
 })();
+
+/* =====================================================================
+   Mi lista de estudiantes (index.html#mi-lista)
+   El campo usa data-dc-persist="lista-estudiantes": dinamiclase.js lo
+   guarda y lo comparte con las herramientas que usan nombres.
+   ===================================================================== */
+(() => {
+  'use strict';
+
+  const DC = window.Dinamiclase;
+  const list = document.getElementById('myList');
+  if (!DC || !list) return;
+  const $ = (id) => document.getElementById(id);
+  const countEl = $('myListCount');
+  const statusEl = $('myListStatus');
+
+  const names = () => list.value.split(/\r?\n/).map((n) => n.trim()).filter(Boolean);
+  const keyOf = (n) => n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ');
+
+  function paint() {
+    const all = names();
+    const seen = new Set();
+    let repeated = 0;
+    all.forEach((n) => {
+      const k = keyOf(n);
+      if (seen.has(k)) repeated += 1;
+      else seen.add(k);
+    });
+    countEl.textContent = `${all.length} ${all.length === 1 ? 'estudiante' : 'estudiantes'}`
+      + (repeated ? ` · ${repeated} ${repeated === 1 ? 'repetido' : 'repetidos'}` : '');
+    countEl.classList.toggle('is-warn', repeated > 0);
+    $('listClean').disabled = repeated === 0 && !/\n\s*\n|^\s|\s$/m.test(list.value);
+    $('listSort').disabled = all.length < 2;
+    $('listClear').disabled = all.length === 0;
+  }
+
+  let savedTimer;
+  function showSaved(text = 'Guardado. Ya está disponible en las herramientas.') {
+    statusEl.innerHTML = `<i class="bi bi-check-circle-fill" aria-hidden="true"></i> ${text}`;
+    statusEl.classList.add('is-ok');
+    clearTimeout(savedTimer);
+    savedTimer = setTimeout(() => {
+      statusEl.innerHTML = '<i class="bi bi-floppy-fill" aria-hidden="true"></i> Se guarda automáticamente.';
+      statusEl.classList.remove('is-ok');
+    }, 2600);
+  }
+
+  /** Cambia la lista desde código y avisa a dinamiclase.js para que la guarde. */
+  function setList(lines, message) {
+    list.value = lines.join('\n');
+    list.dispatchEvent(new Event('input', { bubbles: true }));
+    if (message) showSaved(message);
+  }
+
+  /** Una fila de Excel, Sheets o CSV («López;Ana», «López, Ana», con tabuladores…) → «López Ana». */
+  const cleanRow = (row) => row.split(/[\t;]|,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
+    .map((cell) => cell.replace(/^"|"$/g, '').replace(/""/g, '"').trim())
+    .filter(Boolean)
+    .join(' ');
+
+  let typing;
+  list.addEventListener('input', (e) => {
+    paint();
+    if (!e.isTrusted) return;
+    // Al pegar desde una hoja de cálculo llegan tabuladores: se convierten en espacios
+    if (list.value.includes('\t')) {
+      const pos = list.selectionStart;
+      list.value = list.value.replace(/\t+/g, ' ');
+      list.setSelectionRange(pos, pos);
+    }
+    clearTimeout(typing);
+    typing = setTimeout(() => showSaved('Guardado.'), 700);
+  });
+
+  $('listImport').addEventListener('click', () => $('listFile').click());
+  $('listFile').addEventListener('change', async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    try {
+      const text = (await file.text()).replace(/^﻿/, '');
+      const rows = text.split(/\r?\n/).map(cleanRow).filter(Boolean);
+      if (!rows.length) throw new Error('vacío');
+      const current = names();
+      if (current.length && !window.confirm(`¿Reemplazar tu lista actual (${current.length}) por los ${rows.length} nombres del archivo?`)) return;
+      setList(rows, `Se importaron ${rows.length} ${rows.length === 1 ? 'nombre' : 'nombres'}.`);
+      DC.utils.sfx('pop');
+    } catch {
+      DC.toast({ title: 'No se pudo leer el archivo', text: 'Usa un archivo .txt o .csv con un nombre por fila.', icon: 'bi-exclamation-triangle-fill', theme: 'red' });
+    }
+  });
+
+  $('listSort').addEventListener('click', () => {
+    setList([...names()].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })), 'Lista ordenada de la A a la Z.');
+  });
+
+  $('listClean').addEventListener('click', () => {
+    const seen = new Set();
+    const before = names().length;
+    const unique = names().map((n) => n.replace(/\s+/g, ' ')).filter((n) => {
+      const k = keyOf(n);
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+    const removed = before - unique.length;
+    setList(unique, removed ? `Se ${removed === 1 ? 'quitó 1 nombre repetido' : `quitaron ${removed} nombres repetidos`}.` : 'Se quitaron las líneas vacías.');
+  });
+
+  $('listClear').addEventListener('click', () => {
+    if (!window.confirm('¿Borrar tu lista de estudiantes? Dejará de aparecer en todas las herramientas.')) return;
+    setList([], 'Lista borrada.');
+  });
+
+  paint();
+})();

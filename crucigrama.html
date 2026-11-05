@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generador de crucigramas · Dinamiclase</title>
+    <meta name="description" content="Generador de crucigramas para clase: escribe las palabras con sus pistas, crea el crucigrama automáticamente y resuélvelo en pantalla o imprímelo con su solución.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/crucigrama.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Generador de crucigramas · Dinamiclase">
+    <meta property="og:description" content="Generador de crucigramas para clase: escribe las palabras con sus pistas, crea el crucigrama automáticamente y resuélvelo en pantalla o imprímelo con su solución.">
+    <meta property="og:url" content="https://dinamiclase.org/crucigrama.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-border-all" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-indigo" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-indigo" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Crucigrama</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-border-all"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-palette-fill" aria-hidden="true"></i> Crea</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Crucigrama</h1>
+              <p class="dc-toolhero__lead">Escribe palabras con sus pistas y el crucigrama se arma solo. Resuélvelo en el proyector o imprímelo con su solución.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Escribe palabra y pista</li><li>El crucigrama se arma solo</li><li>Resuelve o imprime</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-indigo" id="herramienta" aria-label="Crucigrama">
+        <div class="dc-container">
+          <div class="dc-split dc-split--stage-first">
+            <div class="dc-panel dc-stack dc-sticky dc-no-print">
+              <label class="dc-field" style="margin:0"><span class="dc-field__label"><span class="dc-num">1</span> Título de la ficha</span>
+                <input class="dc-input" id="cwTitle" type="text" maxlength="60" value="Paisajes de la Tierra" data-dc-persist="crucigrama-titulo"></label>
+
+              <div class="dc-field" style="margin:0">
+                <div class="dc-field__head">
+                  <label class="dc-field__label" for="cwWords"><span class="dc-num">2</span> Palabras y pistas</label>
+                  <span class="dc-counter" id="cwCount">0 palabras</span>
+                </div>
+                <textarea id="cwWords" class="dc-input dc-input--list" data-dc-persist="crucigrama-palabras" spellcheck="false" placeholder="Palabra - pista">Volcán - Montaña que puede expulsar lava
+Planeta - Cuerpo que gira alrededor de una estrella
+Océano - Gran masa de agua salada
+Desierto - Lugar donde casi nunca llueve
+Río - Corriente de agua que desemboca en el mar
+Isla - Tierra rodeada de agua por todas partes
+Montaña - Gran elevación natural del terreno
+Selva - Bosque tropical muy húmedo y espeso
+Lago - Masa de agua rodeada de tierra
+Glaciar - Gran masa de hielo que avanza muy despacio</textarea>
+                <p class="dc-field__hint">Una por línea: <code>palabra - pista</code>. Hasta 30 palabras. En las casillas se quitan los acentos (la Ñ se mantiene).</p>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">3</span> Opciones</span>
+                <label class="dc-switch"><input type="checkbox" id="cwLengths" checked data-dc-persist="crucigrama-longitud"><span class="dc-switch__track"></span><span>Indicar el número de letras <small>Por ejemplo: «Isla (4)»</small></span></label>
+                <label class="dc-switch"><input type="checkbox" id="cwPrintSolution" checked data-dc-persist="crucigrama-imprimir-solucion"><span class="dc-switch__track"></span><span>Imprimir también la solución <small>En una segunda hoja</small></span></label>
+              </div>
+
+              <button class="dc-btn dc-btn--block" type="button" id="newBtn"><i class="bi bi-shuffle" aria-hidden="true"></i> Otra distribución</button>
+              <button class="dc-btn dc-btn--block dc-btn--ghost" type="button" id="printBtn"><i class="bi bi-printer-fill" aria-hidden="true"></i> Imprimir ficha</button>
+            </div>
+
+            <div class="dc-panel dc-stage cw" id="stage">
+              <div class="dc-stagebar dc-no-print">
+                <h2 class="dc-stagebar__title">Resuelve el crucigrama</h2>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-tbtn" type="button" id="checkBtn"><i class="bi bi-check2-circle" aria-hidden="true"></i> Comprobar</button>
+                  <button class="dc-tbtn" type="button" id="revealBtn"><i class="bi bi-magic" aria-hidden="true"></i> Revelar palabra</button>
+                  <button class="dc-tbtn" type="button" id="solveBtn"><i class="bi bi-eye-fill" aria-hidden="true"></i> Solución</button>
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+              <div class="cw-sheet" id="sheet">
+                <header class="ws-head">
+                  <h2 class="ws-title" id="sheetTitle">Crucigrama</h2>
+                  <p class="ws-fill">Nombre: <span></span> Fecha: <span></span></p>
+                </header>
+                <p class="cw-status dc-no-print" id="status" aria-live="polite"></p>
+                <div class="cw-layout">
+                  <div class="cw-board" id="board"></div>
+                  <div class="cw-clues">
+                    <section><h3><i class="bi bi-arrow-right" aria-hidden="true"></i> Horizontales</h3><ol class="cw-cluelist" id="cluesH"></ol></section>
+                    <section><h3><i class="bi bi-arrow-down" aria-hidden="true"></i> Verticales</h3><ol class="cw-cluelist" id="cluesV"></ol></section>
+                  </div>
+                </div>
+                <p class="dc-notice dc-notice--warn dc-no-print" id="cwWarn" hidden></p>
+              </div>
+              <div class="cw-sheet ws-solution" id="solution" aria-hidden="true"></div>
+              <p class="dc-field__hint dc-kbd-hint dc-no-print" style="text-align:center">Toca una casilla y escribe. Vuelve a tocarla para cambiar entre horizontal y vertical; las flechas también te mueven.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-indigo" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-journal-text"></i></span>
+              <h3>Glosario de la unidad</h3>
+              <p>Usa las definiciones del tema como pistas: es un repaso que el grupo resuelve solo.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-pencil-square"></i></span>
+              <h3>Que lo creen ellos</h3>
+              <p>Cada equipo escribe cinco palabras con sus pistas; junta todo y el crucigrama se arma con las de toda la clase.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-display"></i></span>
+              <h3>Resolución en grupo</h3>
+              <p>Proyéctalo y resuélvanlo entre todos: quien acierta una palabra la explica con un ejemplo.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-indigo"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-green dc-reveal" href="sopa-de-letras.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-search"></i></span>
+              <span><strong>Sopa de letras</strong><span class="dc-mini-tool__desc">Fichas de palabras escondidas.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-red dc-reveal" href="memorama.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-grid-3x2-gap-fill"></i></span>
+              <span><strong>Memorama de conceptos</strong><span class="dc-mini-tool__desc">Busquen parejas por equipos.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-purple dc-reveal" href="palabra-secreta.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-alphabet-uppercase"></i></span>
+              <span><strong>Palabra secreta</strong><span class="dc-mini-tool__desc">Adivinen la palabra letra por letra.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+            <li><a href="codigo-qr.html">Códigos QR</a></li>
+            <li><a href="memorama.html">Memorama de conceptos</a></li>
+            <li><a href="palabra-secreta.html">Palabra secreta</a></li>
+            <li><a href="tangram.html">Tangram</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="cadaver-exquisito.html">Cadáver exquisito</a></li>
+            <li><a href="mapa-asientos.html">Mapa de asientos</a></li>
+            <li><a href="sopa-de-letras.html">Sopa de letras</a></li>
+            <li><a href="crucigrama.html">Crucigrama</a></li>
+            <li><a href="bombo-sorteo.html">Bombo de sorteos</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="crucigrama.js"></script>
+  </body>
+</html>

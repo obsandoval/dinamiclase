@@ -352,6 +352,27 @@
       el.addEventListener('input', save);
       el.addEventListener('change', save);
     });
+
+    // Si el dato cambia en otra pestaña (p. ej. la lista de estudiantes en la portada), se actualiza aquí
+    window.addEventListener('storage', (e) => {
+      if (!e.key || !e.key.startsWith(STORE_PREFIX)) return;
+      let value = null;
+      try { value = JSON.parse(e.newValue); } catch { return; }
+      const key = e.key.slice(STORE_PREFIX.length);
+      $$(`[data-dc-persist="${CSS.escape(key)}"]`).forEach((el) => {
+        if (el === document.activeElement) return; // no se pisa lo que alguien está escribiendo
+        if (el.type === 'checkbox') {
+          if (el.checked === Boolean(value)) return;
+          el.checked = Boolean(value);
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+        } else {
+          const next = value === null ? '' : String(value);
+          if (el.value === next) return;
+          el.value = next;
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      });
+    });
   }
 
   /* Selector numérico: [data-dc-stepper] > button[data-step] + input[type=number] */

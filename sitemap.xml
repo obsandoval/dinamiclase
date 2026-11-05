@@ -70,15 +70,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dinamiclase.org/semaforo-ruido.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://dinamiclase.org/cadaver-exquisito.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dinamiclase.org/mapa-asientos.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/sopa-de-letras.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/crucigrama.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/bombo-sorteo.html</loc>
     <priority>0.8</priority>
   </url>
 
