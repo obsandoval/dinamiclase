@@ -49,5 +49,37 @@
     <loc>https://dinamiclase.org/pomodoro.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dinamiclase.org/codigo-qr.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/memorama.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/palabra-secreta.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/tangram.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/sudoku.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/semaforo-ruido.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/cadaver-exquisito.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dinamiclase.org/mapa-asientos.html</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>

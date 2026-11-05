@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadáver exquisito: historia colectiva · Dinamiclase</title>
+    <meta name="description" content="Cadáver exquisito online para clase: una historia colectiva en una sola computadora. Cada estudiante escribe una frase viendo solo la anterior y al final se lee todo en voz alta.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/cadaver-exquisito.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Cadáver exquisito: historia colectiva · Dinamiclase">
+    <meta property="og:description" content="Cadáver exquisito online para clase: una historia colectiva en una sola computadora. Cada estudiante escribe una frase viendo solo la anterior y al final se lee todo en voz alta.">
+    <meta property="og:url" content="https://dinamiclase.org/cadaver-exquisito.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-pen-fill" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-pink" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-pink" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Cadáver exquisito</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-pen-fill"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-palette-fill" aria-hidden="true"></i> Crea</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Cadáver exquisito</h1>
+              <p class="dc-toolhero__lead">Una historia colectiva en una sola computadora: cada estudiante escribe una frase viendo solo la anterior, y al final se descubre todo para leerlo en voz alta.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Elige cuántas frases</li><li>Cada quien escribe viendo solo la anterior</li><li>¡Lean la historia completa!</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-pink" id="herramienta" aria-label="Cadáver exquisito">
+        <div class="dc-container">
+          <div class="dc-split dc-split--stage-first">
+            <div class="dc-panel dc-stack dc-sticky dc-no-print">
+              <label class="dc-field" style="margin:0"><span class="dc-field__label"><span class="dc-num">1</span> Título o tema <small class="dc-muted">(opcional)</small></span>
+                <input class="dc-input" id="storyTitle" type="text" maxlength="70" placeholder="Ej.: El dragón que odiaba el fuego" data-dc-persist="cadaver-titulo"></label>
+
+              <label class="dc-field" style="margin:0"><span class="dc-field__label"><span class="dc-num">2</span> Primera frase <small class="dc-muted">(opcional)</small></span>
+                <textarea class="dc-input" id="firstLine" rows="2" maxlength="300" placeholder="Ej.: Había una vez un dragón que estornudaba burbujas." data-dc-persist="cadaver-inicio"></textarea>
+                <span class="dc-field__hint">Si la escribes tú, la historia empieza con ella.</span></label>
+
+              <div class="dc-field" style="margin:0">
+                <div class="dc-field__head">
+                  <label class="dc-field__label" for="players"><span class="dc-num">3</span> Participantes <small class="dc-muted">(opcional)</small></label>
+                  <span class="dc-counter" id="playersCount">0</span>
+                </div>
+                <textarea class="dc-input" id="players" rows="4" spellcheck="false" placeholder="Un nombre por línea: el turno irá pasando en este orden" data-dc-persist="cadaver-participantes"></textarea>
+                <div class="dc-row" style="margin-top:.6rem">
+                  <button class="dc-tbtn" type="button" id="useStudents"><i class="bi bi-people-fill" aria-hidden="true"></i> Usar mi lista</button>
+                  <label class="dc-switch"><input type="checkbox" id="shufflePlayers"><span class="dc-switch__track"></span><span>Turnos al azar</span></label>
+                </div>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label" id="limitLabel"><span class="dc-num">4</span> Frases por escribir</span>
+                <div class="dc-segmented dc-segmented--sm dc-segmented--block" role="radiogroup" aria-labelledby="limitLabel">
+                  <label><input type="radio" name="ceLimit" value="players"><span>Una por persona</span></label>
+                  <label><input type="radio" name="ceLimit" value="6"><span>6</span></label>
+                  <label><input type="radio" name="ceLimit" value="10" checked><span>10</span></label>
+                  <label><input type="radio" name="ceLimit" value="0"><span>Sin límite</span></label>
+                </div>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label" id="peekLabel"><span class="dc-num">5</span> De la frase anterior se ve…</span>
+                <div class="dc-segmented dc-segmented--sm dc-segmented--block" role="radiogroup" aria-labelledby="peekLabel">
+                  <label><input type="radio" name="cePeek" value="all" checked><span>Toda la frase</span></label>
+                  <label><input type="radio" name="cePeek" value="end"><span>Solo el final</span></label>
+                </div>
+                <p class="dc-field__hint" style="margin:0">«Solo el final» muestra las últimas cuatro palabras: la historia queda más sorprendente.</p>
+              </div>
+
+              <button class="dc-btn dc-btn--block" type="button" id="startBtn"><i class="bi bi-play-fill" aria-hidden="true"></i> Empezar historia</button>
+            </div>
+
+            <div class="dc-panel dc-stage ce" id="stage" data-view="setup">
+              <div class="dc-stagebar dc-no-print">
+                <h2 class="dc-stagebar__title">Historia colectiva</h2>
+                <div class="dc-stagebar__tools">
+                  <span class="dc-counter" id="linesCount">0 frases</span>
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+              <div class="ce-view ce-view--setup">
+                <div class="dc-placeholder">
+                  <i class="bi bi-pen-fill" aria-hidden="true"></i>
+                  <p>Elige las opciones y pulsa «Empezar historia».</p>
+                </div>
+              </div>
+
+              <div class="ce-view ce-view--write">
+                <p class="ce-turn"><span id="turnNum">Frase 1</span><strong id="turnName"></strong></p>
+                <div class="ce-prev">
+                  <span class="ce-prev__label" id="prevLabel">La frase anterior:</span>
+                  <p class="ce-prev__text" id="prevText"></p>
+                </div>
+                <label class="dc-field__label" for="line">Escribe la siguiente frase</label>
+                <textarea class="dc-input ce-line" id="line" rows="3" maxlength="300" placeholder="Continúa la historia…"></textarea>
+                <div class="dc-row dc-row--between" style="margin-top:.75rem">
+                  <span class="dc-field__hint" style="margin:0"><span id="lineCount">0</span>/300 · Atajo: <kbd class="dc-kbd">Ctrl</kbd> + <kbd class="dc-kbd">Enter</kbd></span>
+                  <div class="dc-row">
+                    <button class="dc-tbtn" type="button" id="finishBtn"><i class="bi bi-flag-fill" aria-hidden="true"></i> Terminar y leer</button>
+                    <button class="dc-btn dc-btn--sm dc-btn--theme" type="button" id="saveLine">Guardar y pasar <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ce-view ce-view--pass">
+                <span class="ce-pass__icon" aria-hidden="true"><i class="bi bi-arrow-left-right"></i></span>
+                <h3 class="ce-pass__title">¡Frase guardada!</h3>
+                <p class="ce-pass__text" id="passText">Pasa la computadora a la siguiente persona.</p>
+                <button class="dc-btn dc-btn--theme" type="button" id="readyBtn"><i class="bi bi-eye-fill" aria-hidden="true"></i> Ver la frase anterior</button>
+              </div>
+
+              <div class="ce-view ce-view--read">
+                <h3 class="ce-story-title" id="storyHeading">Nuestra historia</h3>
+                <ol class="ce-story" id="story"></ol>
+                <div class="dc-row dc-row--center ce-read-tools dc-no-print">
+                  <button class="dc-btn dc-btn--sm dc-btn--theme" type="button" id="revealNext"><i class="bi bi-chevron-double-down" aria-hidden="true"></i> Siguiente frase</button>
+                  <button class="dc-tbtn" type="button" id="revealAll"><i class="bi bi-eye-fill" aria-hidden="true"></i> Mostrar todo</button>
+                  <button class="dc-tbtn" type="button" id="speakBtn" hidden><i class="bi bi-megaphone-fill" aria-hidden="true"></i> Leer en voz alta</button>
+                  <button class="dc-tbtn" type="button" id="copyStory"><i class="bi bi-clipboard-fill" aria-hidden="true"></i> Copiar texto</button>
+                  <button class="dc-tbtn" type="button" id="printStory"><i class="bi bi-printer-fill" aria-hidden="true"></i> Imprimir</button>
+                  <button class="dc-tbtn" type="button" id="moreBtn"><i class="bi bi-plus-lg" aria-hidden="true"></i> Seguir escribiendo</button>
+                  <button class="dc-tbtn" type="button" id="newStory"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Nueva historia</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-pink" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-book-half"></i></span>
+              <h3>Géneros literarios</h3>
+              <p>Pide que la historia sea de terror, de ciencia ficción o una fábula, y analicen después sus rasgos.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-spellcheck"></i></span>
+              <h3>Conectores</h3>
+              <p>Cada frase debe empezar con un conector distinto: «de repente», «sin embargo», «por eso»…</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-translate"></i></span>
+              <h3>En otro idioma</h3>
+              <p>Escriban la historia en inglés u otro idioma: cada estudiante practica una frase con sentido.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-pink"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-pink dc-reveal" href="storycube-normal.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-dice-3-fill"></i></span>
+              <span><strong>Story Icons</strong><span class="dc-mini-tool__desc">Dados para inventar historias.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-purple dc-reveal" href="palabra-secreta.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-alphabet-uppercase"></i></span>
+              <span><strong>Palabra secreta</strong><span class="dc-mini-tool__desc">Adivinen la palabra letra por letra.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-cyan dc-reveal" href="preguntas-rompe-hielo.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+              <span><strong>Preguntas rompe-hielo</strong><span class="dc-mini-tool__desc">Preguntas para animar al grupo.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+            <li><a href="codigo-qr.html">Códigos QR</a></li>
+            <li><a href="memorama.html">Memorama de conceptos</a></li>
+            <li><a href="palabra-secreta.html">Palabra secreta</a></li>
+            <li><a href="tangram.html">Tangram</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="semaforo-ruido.html">Semáforo de ruido</a></li>
+            <li><a href="cadaver-exquisito.html">Cadáver exquisito</a></li>
+            <li><a href="mapa-asientos.html">Mapa de asientos</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="cadaver-exquisito.js"></script>
+  </body>
+</html>

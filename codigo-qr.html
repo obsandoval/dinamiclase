@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generador de códigos QR · Dinamiclase</title>
+    <meta name="description" content="Crea códigos QR gratis para compartir enlaces, textos o la red Wi-Fi del aula. Personaliza los colores y la forma, y descárgalos en PNG o SVG.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/codigo-qr.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Generador de códigos QR · Dinamiclase">
+    <meta property="og:description" content="Crea códigos QR gratis para compartir enlaces, textos o la red Wi-Fi del aula. Personaliza los colores y la forma, y descárgalos en PNG o SVG.">
+    <meta property="og:url" content="https://dinamiclase.org/codigo-qr.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-qr-code" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-indigo" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-indigo" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Generador de códigos QR</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-qr-code"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Generador de códigos QR</h1>
+              <p class="dc-toolhero__lead">Crea códigos QR para compartir enlaces, textos o la red Wi-Fi del aula. Elige los colores y la forma, y descárgalos en PNG o SVG.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Escribe el enlace o el texto</li><li>Elige colores y estilo</li><li>Descarga en PNG o SVG</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-indigo" id="herramienta" aria-label="Generador de códigos QR">
+        <div class="dc-container">
+          <div class="dc-split dc-split--even">
+            <!-- Configuración -->
+            <div class="dc-panel dc-stack">
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">1</span> ¿Qué quieres compartir?</span>
+                <div class="dc-segmented dc-segmented--block" role="radiogroup" aria-label="Tipo de contenido">
+                  <label><input type="radio" name="qrType" value="texto" checked><span><i class="bi bi-link-45deg" aria-hidden="true"></i> Enlace o texto</span></label>
+                  <label><input type="radio" name="qrType" value="wifi"><span><i class="bi bi-wifi" aria-hidden="true"></i> Red Wi-Fi</span></label>
+                </div>
+
+                <div class="dc-field" id="panelTexto" style="margin:0">
+                  <div class="dc-field__head">
+                    <label class="dc-field__label" for="qrText">Enlace o texto</label>
+                    <span class="dc-counter" id="textCount">0 caracteres</span>
+                  </div>
+                  <textarea id="qrText" class="dc-input" rows="3" data-dc-persist="qr-texto" spellcheck="false" placeholder="https://… o cualquier texto"></textarea>
+                  <p class="dc-field__hint">Cuanto más corto, más fácil de escanear. <button class="dc-link-btn" type="button" id="qrExample">Usar ejemplo</button></p>
+                </div>
+
+                <div class="dc-stack dc-stack--sm" id="panelWifi" hidden>
+                  <label class="dc-field" style="margin:0"><span class="dc-field__label">Nombre de la red</span>
+                    <input class="dc-input" id="wifiSsid" type="text" autocomplete="off" spellcheck="false" data-dc-persist="qr-wifi-red"></label>
+                  <div class="dc-segmented dc-segmented--sm" role="radiogroup" aria-label="Seguridad de la red">
+                    <label><input type="radio" name="wifiSec" value="WPA" checked><span>WPA / WPA2</span></label>
+                    <label><input type="radio" name="wifiSec" value="WEP"><span>WEP</span></label>
+                    <label><input type="radio" name="wifiSec" value="nopass"><span>Sin contraseña</span></label>
+                  </div>
+                  <label class="dc-field" id="wifiPassField" style="margin:0"><span class="dc-field__label">Contraseña</span>
+                    <input class="dc-input" id="wifiPass" type="text" autocomplete="off" spellcheck="false"></label>
+                  <label class="dc-switch"><input type="checkbox" id="wifiHidden"><span class="dc-switch__track"></span><span>Red oculta</span></label>
+                  <p class="dc-field__hint" style="margin:0"><i class="bi bi-shield-check" aria-hidden="true"></i> Al escanearlo, los móviles se conectan sin escribir la contraseña. La contraseña no se guarda.</p>
+                </div>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">2</span> Colores</span>
+                <div class="qr-presets" id="presets" role="group" aria-label="Combinaciones de color"></div>
+                <div class="qr-colors">
+                  <label class="qr-color"><input type="color" id="fgColor" value="#231942"><span>Código</span><code id="fgHex">#231942</code></label>
+                  <label class="qr-color"><input type="color" id="bgColor" value="#FFFFFF"><span>Fondo</span><code id="bgHex">#FFFFFF</code></label>
+                </div>
+                <div class="dc-row dc-row--between">
+                  <label class="dc-switch"><input type="checkbox" id="transparent"><span class="dc-switch__track"></span><span>Fondo transparente <small>Ideal para presentaciones</small></span></label>
+                  <button class="dc-tbtn" type="button" id="swapColors"><i class="bi bi-arrow-left-right" aria-hidden="true"></i> Invertir</button>
+                </div>
+                <p class="dc-notice dc-notice--warn" id="contrastWarn" hidden></p>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">3</span> Estilo</span>
+                <div class="dc-segmented dc-segmented--block" role="radiogroup" aria-label="Forma de los puntos">
+                  <label><input type="radio" name="qrShape" value="square" checked><span><i class="bi bi-square-fill" aria-hidden="true"></i> Cuadrados</span></label>
+                  <label><input type="radio" name="qrShape" value="rounded"><span><i class="bi bi-app" aria-hidden="true"></i> Redondeados</span></label>
+                  <label><input type="radio" name="qrShape" value="dots"><span><i class="bi bi-circle-fill" aria-hidden="true"></i> Puntos</span></label>
+                </div>
+                <div class="qr-row2">
+                  <div class="dc-stack dc-stack--sm">
+                    <span class="dc-small" style="font-weight:800" id="marginLabel">Margen</span>
+                    <div class="dc-stepper" data-dc-stepper>
+                      <button type="button" data-step="-1" aria-label="Menos margen">−</button>
+                      <input id="qrMargin" type="number" min="0" max="8" value="2" inputmode="numeric" aria-labelledby="marginLabel">
+                      <button type="button" data-step="1" aria-label="Más margen">+</button>
+                    </div>
+                  </div>
+                  <div class="dc-stack dc-stack--sm">
+                    <span class="dc-small" style="font-weight:800" id="eccLabel">Resistencia a daños</span>
+                    <div class="dc-segmented dc-segmented--sm dc-segmented--block" role="radiogroup" aria-labelledby="eccLabel">
+                      <label title="Recupera hasta un 7 % del código"><input type="radio" name="qrEcc" value="L"><span>Baja</span></label>
+                      <label title="Recupera hasta un 15 % del código"><input type="radio" name="qrEcc" value="M" checked><span>Media</span></label>
+                      <label title="Recupera hasta un 25 % del código"><input type="radio" name="qrEcc" value="Q"><span>Alta</span></label>
+                      <label title="Recupera hasta un 30 % del código"><input type="radio" name="qrEcc" value="H"><span>Máx.</span></label>
+                    </div>
+                  </div>
+                </div>
+                <label class="dc-field" style="margin:0"><span class="dc-field__label">Texto debajo <small class="dc-muted">(opcional)</small></span>
+                  <input class="dc-input" id="qrCaption" type="text" maxlength="60" placeholder="Ej.: Escanea para ver la tarea" data-dc-persist="qr-leyenda"></label>
+              </div>
+            </div>
+
+            <!-- Vista previa y descarga -->
+            <div class="dc-panel dc-stage dc-sticky qr-stage" id="stage">
+              <div class="dc-stagebar">
+                <h2 class="dc-stagebar__title">Vista previa</h2>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+              <div class="qr-preview" id="preview"></div>
+              <p class="qr-meta" id="qrMeta" aria-live="polite"></p>
+
+              <div class="qr-export">
+                <span class="dc-small" style="font-weight:800" id="sizeLabel">Tamaño del PNG</span>
+                <div class="dc-segmented dc-segmented--sm" role="radiogroup" aria-labelledby="sizeLabel">
+                  <label><input type="radio" name="qrSize" value="512"><span>512 px</span></label>
+                  <label><input type="radio" name="qrSize" value="1024" checked><span>1024 px</span></label>
+                  <label><input type="radio" name="qrSize" value="2048"><span>2048 px</span></label>
+                </div>
+                <div class="dc-row">
+                  <button class="dc-btn" type="button" id="dlPng"><i class="bi bi-filetype-png" aria-hidden="true"></i> Descargar PNG</button>
+                  <button class="dc-btn dc-btn--theme" type="button" id="dlSvg"><i class="bi bi-filetype-svg" aria-hidden="true"></i> Descargar SVG</button>
+                  <button class="dc-icon-btn" type="button" id="copyImg" title="Copiar imagen" aria-label="Copiar imagen"><i class="bi bi-clipboard-fill" aria-hidden="true"></i></button>
+                </div>
+                <p class="dc-field__hint" style="margin:0">PNG para documentos y presentaciones · SVG para imprimir en grande sin perder calidad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-indigo" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-phone-fill"></i></span>
+              <h3>Materiales al instante</h3>
+              <p>Proyecta el QR de una presentación, un formulario o un video para que el grupo lo abra en su móvil.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-search-heart"></i></span>
+              <h3>Búsqueda del tesoro</h3>
+              <p>Esconde códigos con pistas o preguntas por el aula o el patio y que cada equipo los vaya encontrando.</p>
+            </li>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-printer-fill"></i></span>
+              <h3>Fichas enriquecidas</h3>
+              <p>Añade un QR a tus fichas impresas para enlazar audios, videos o las soluciones de los ejercicios.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-indigo"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-orange dc-reveal" href="pizarra.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-easel2-fill"></i></span>
+              <span><strong>Pizarra de dibujo</strong><span class="dc-mini-tool__desc">Dibuja y explica en grande.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-purple dc-reveal" href="asignador-temas.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-journal-bookmark-fill"></i></span>
+              <span><strong>Asignador de temas</strong><span class="dc-mini-tool__desc">Reparte temas entre tus estudiantes.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-cyan dc-reveal" href="preguntas-rompe-hielo.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></span>
+              <span><strong>Preguntas rompe-hielo</strong><span class="dc-mini-tool__desc">Preguntas para animar al grupo.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+            <li><a href="codigo-qr.html">Códigos QR</a></li>
+            <li><a href="memorama.html">Memorama de conceptos</a></li>
+            <li><a href="palabra-secreta.html">Palabra secreta</a></li>
+            <li><a href="tangram.html">Tangram</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="semaforo-ruido.html">Semáforo de ruido</a></li>
+            <li><a href="cadaver-exquisito.html">Cadáver exquisito</a></li>
+            <li><a href="mapa-asientos.html">Mapa de asientos</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js" integrity="sha384-8FWZA6BGMXhsfO+BLtrJK0We6gg5o1JyO8xQm6peWDEUs17ACA5ziE/NIAkl9z2k" crossorigin="anonymous"></script>
+    <script src="codigo-qr.js"></script>
+  </body>
+</html>

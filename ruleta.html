@@ -136,6 +136,12 @@ Fernando</textarea>
                 <input class="dc-range" type="range" id="duration" min="3" max="15" step="1" value="6" data-dc-persist="ruleta-duracion">
                 <label class="dc-switch"><input type="checkbox" id="removeWinner" data-dc-persist="ruleta-quitar"><span class="dc-switch__track"></span><span>Quitar al ganador <small>Para sortear varias veces sin repetir</small></span></label>
               </div>
+
+              <div class="dc-field" style="margin:0">
+                <label class="dc-field__label" for="raffleTitle"><span class="dc-num">4</span> Nombre del sorteo <small class="dc-muted">(opcional)</small></label>
+                <input class="dc-input" id="raffleTitle" type="text" maxlength="60" placeholder="Ej.: Sorteo de fin de curso" data-dc-persist="ruleta-titulo">
+                <p class="dc-field__hint">Aparece en el resultado y en la imagen que guardes.</p>
+              </div>
             </div>
 
             <div class="dc-panel dc-stage" id="stage">
@@ -252,6 +258,14 @@ Fernando</textarea>
             <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
             <li><a href="pizarra.html">Pizarra de dibujo</a></li>
             <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+            <li><a href="codigo-qr.html">Códigos QR</a></li>
+            <li><a href="memorama.html">Memorama de conceptos</a></li>
+            <li><a href="palabra-secreta.html">Palabra secreta</a></li>
+            <li><a href="tangram.html">Tangram</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="semaforo-ruido.html">Semáforo de ruido</a></li>
+            <li><a href="cadaver-exquisito.html">Cadáver exquisito</a></li>
+            <li><a href="mapa-asientos.html">Mapa de asientos</a></li>
           </ul>
         </nav>
         <div>
@@ -268,10 +282,15 @@ Fernando</textarea>
       <div class="dc-dialog__card dc-theme-green rl-winner">
         <button class="dc-dialog__close" type="button" data-close aria-label="Cerrar"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
         <p class="dc-eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> ¡Tenemos resultado!</p>
+        <p class="rl-winner__title" id="winnerTitle" hidden></p>
         <h2 class="rl-winner__name" id="winnerName">…</h2>
         <div class="dc-dialog__actions">
           <button class="dc-btn dc-btn--sm dc-btn--ghost" type="button" id="removeBtn"><i class="bi bi-person-dash-fill" aria-hidden="true"></i> Quitar de la ruleta</button>
           <button class="dc-btn dc-btn--sm dc-btn--theme" type="button" id="againBtn"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Girar otra vez</button>
+        </div>
+        <div class="rl-winner__share">
+          <button class="dc-tbtn" type="button" id="saveImgBtn"><i class="bi bi-image-fill" aria-hidden="true"></i> Guardar imagen</button>
+          <button class="dc-tbtn" type="button" id="copyImgBtn"><i class="bi bi-clipboard-fill" aria-hidden="true"></i> Copiar imagen</button>
         </div>
       </div>
     </dialog>

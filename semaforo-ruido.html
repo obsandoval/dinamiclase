@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Semáforo de ruido para el aula · Dinamiclase</title>
+    <meta name="description" content="Semáforo de ruido para clase: escucha por el micrófono de la computadora y pasa de verde a rojo según el volumen. El sonido se analiza en el navegador, sin grabarse ni enviarse.">
+    <meta name="theme-color" content="#FB5306">
+    <link rel="canonical" href="https://dinamiclase.org/semaforo-ruido.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Semáforo de ruido para el aula · Dinamiclase">
+    <meta property="og:description" content="Semáforo de ruido para clase: escucha por el micrófono de la computadora y pasa de verde a rojo según el volumen. El sonido se analiza en el navegador, sin grabarse ni enviarse.">
+    <meta property="og:url" content="https://dinamiclase.org/semaforo-ruido.html">
+    <meta property="og:image" content="https://dinamiclase.org/IMG/my-favicon/web-app-manifest-512x512.png">
+
+    <script>document.documentElement.classList.add('dc-js');</script>
+
+    <!-- FAVICON (rutas relativas: compatibles con GitHub Pages) -->
+    <link rel="icon" type="image/png" href="IMG/my-favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="IMG/my-favicon/favicon.svg">
+    <link rel="shortcut icon" href="IMG/my-favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/my-favicon/apple-touch-icon.png">
+    <link rel="manifest" href="IMG/my-favicon/site.webmanifest">
+
+    <!-- Tipografías + iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Sistema de diseño Dinamiclase -->
+    <link rel="stylesheet" href="dinamiclase.css">
+    <link rel="stylesheet" href="herramientas.css">
+  </head>
+
+  <body class="dc">
+    <a class="dc-skip" href="#herramienta">Saltar a la herramienta</a>
+
+    <!-- =============================================================
+         NAVEGACIÓN
+         ============================================================= -->
+    <header class="dc-nav">
+      <div class="dc-container dc-nav__inner">
+        <a class="dc-brand" href="index.html" aria-label="Dinamiclase, inicio">
+          <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+          <span>Dinami<span class="dc-brand__accent">clase</span></span>
+        </a>
+
+        <nav class="dc-nav__nav" aria-label="Principal">
+          <ul class="dc-nav__menu" id="dc-menu">
+            <li><a class="dc-nav__link" href="#herramienta"><i class="bi bi-stoplights-fill" aria-hidden="true"></i> Herramienta</a></li>
+            <li><a class="dc-nav__link" href="#ideas"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas</a></li>
+            <li><a class="dc-nav__link" href="index.html#herramientas"><i class="bi bi-grid-fill" aria-hidden="true"></i> Más herramientas</a></li>
+            <li><a class="dc-nav__link" href="index.html#sugerencias"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i> Sugerencias</a></li>
+          </ul>
+        </nav>
+
+
+        <button class="dc-nav__toggle" type="button" aria-expanded="false" aria-controls="dc-menu" aria-label="Abrir menú">
+          <i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- =============================================================
+           CABECERA DE LA HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-toolhero dc-theme-yellow" aria-labelledby="tool-title">
+        <div class="dc-deco" aria-hidden="true">
+          <span class="dc-shape dc-shape--dot dc-shape--wide dc-theme-yellow" style="--x:78%; --y:14%; --s:18px; --d:-1s"></span>
+          <span class="dc-shape dc-shape--ring dc-theme-yellow" style="--x:93%; --y:58%; --s:28px; --d:-3s; --t:8s"></span>
+          <i class="bi bi-star-fill dc-shape dc-shape--wide dc-theme-pink" style="--x:62%; --y:72%; --s:20px; --d:-2s; --t:6s"></i>
+          <span class="dc-shape dc-shape--square dc-theme-teal" style="--x:97%; --y:10%; --s:16px; --d:-4s"></span>
+        </div>
+        <div class="dc-container">
+          <nav aria-label="Ruta de navegación">
+            <ol class="dc-breadcrumb">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#herramientas">Herramientas</a></li>
+              <li><span aria-current="page">Semáforo de ruido</span></li>
+            </ol>
+          </nav>
+          <div class="dc-toolhero__grid">
+            <span class="dc-toolhero__icon" aria-hidden="true"><i class="bi bi-stoplights-fill"></i></span>
+            <div>
+              <div class="dc-toolhero__meta">
+                <p class="dc-eyebrow"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> Organiza</p>
+              </div>
+              <h1 class="dc-toolhero__title" id="tool-title">Semáforo de ruido</h1>
+              <p class="dc-toolhero__lead">Escucha por el micrófono de la computadora y pasa de verde a amarillo y a rojo según el volumen del aula. El sonido no se graba ni se envía.</p>
+            </div>
+          </div>
+          <ol class="dc-howto" aria-label="Cómo se usa"><li>Activa el micrófono</li><li>Ajusta los límites con el grupo</li><li>¡Mantengan el verde!</li></ol>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTA
+           ============================================================= -->
+      <section class="dc-workspace dc-theme-yellow" id="herramienta" aria-label="Semáforo de ruido">
+        <div class="dc-container">
+          <div class="dc-split dc-split--stage-first">
+            <div class="dc-panel dc-stack dc-sticky">
+              <p class="dc-notice dc-notice--ok"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i><span>El sonido se analiza en este navegador: no se graba ni se envía a ningún sitio.</span></p>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">1</span> Límites de volumen</span>
+                <div class="dc-field__head" style="margin:0">
+                  <label class="dc-field__label" for="yellowAt" style="margin:0"><span class="sm-dot sm-dot--yellow" aria-hidden="true"></span> Amarillo a partir de</label>
+                  <span class="dc-counter" id="yellowVal">45</span>
+                </div>
+                <input class="dc-range" type="range" id="yellowAt" min="5" max="90" value="45" data-dc-persist="semaforo-amarillo">
+                <div class="dc-field__head" style="margin:0">
+                  <label class="dc-field__label" for="redAt" style="margin:0"><span class="sm-dot sm-dot--red" aria-hidden="true"></span> Rojo a partir de</label>
+                  <span class="dc-counter" id="redVal">70</span>
+                </div>
+                <input class="dc-range" type="range" id="redAt" min="10" max="100" value="70" data-dc-persist="semaforo-rojo">
+                <p class="dc-field__hint" style="margin:0">Mira la barra de volumen con el grupo en silencio y hablando, y ajusta los límites.</p>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label" id="reactLabel"><span class="dc-num">2</span> Reacción</span>
+                <div class="dc-segmented dc-segmented--sm dc-segmented--block" role="radiogroup" aria-labelledby="reactLabel">
+                  <label><input type="radio" name="smReact" value="rapida"><span>Rápida</span></label>
+                  <label><input type="radio" name="smReact" value="normal" checked><span>Normal</span></label>
+                  <label><input type="radio" name="smReact" value="tranquila"><span>Tranquila</span></label>
+                </div>
+                <p class="dc-field__hint" style="margin:0">«Tranquila» no cambia de color por un ruido breve, como una silla o una tos.</p>
+              </div>
+
+              <div class="dc-stack dc-stack--sm">
+                <span class="dc-label"><span class="dc-num">3</span> Mensajes</span>
+                <label class="sm-msgfield"><span class="sm-dot sm-dot--green" aria-hidden="true"></span><span class="dc-visually-hidden">Mensaje en verde</span>
+                  <input class="dc-input" id="msgGreen" type="text" maxlength="40" value="¡Muy bien! Buen volumen" data-dc-persist="semaforo-msg-verde"></label>
+                <label class="sm-msgfield"><span class="sm-dot sm-dot--yellow" aria-hidden="true"></span><span class="dc-visually-hidden">Mensaje en amarillo</span>
+                  <input class="dc-input" id="msgYellow" type="text" maxlength="40" value="Cuidado: baja un poco la voz" data-dc-persist="semaforo-msg-amarillo"></label>
+                <label class="sm-msgfield"><span class="sm-dot sm-dot--red" aria-hidden="true"></span><span class="dc-visually-hidden">Mensaje en rojo</span>
+                  <input class="dc-input" id="msgRed" type="text" maxlength="40" value="¡Demasiado ruido!" data-dc-persist="semaforo-msg-rojo"></label>
+              </div>
+
+              <label class="dc-switch"><input type="checkbox" id="alarm" data-dc-persist="semaforo-alarma"><span class="dc-switch__track"></span><span>Aviso sonoro en rojo <small>Suena una alarma corta al pasar a rojo</small></span></label>
+            </div>
+
+            <div class="dc-panel dc-stage sm" id="stage">
+              <div class="dc-stagebar">
+                <h2 class="dc-stagebar__title">Semáforo</h2>
+                <div class="dc-stagebar__tools">
+                  <button class="dc-btn dc-btn--sm dc-btn--theme" type="button" id="micBtn"><i class="bi bi-mic-fill" aria-hidden="true"></i> <span>Activar micrófono</span></button>
+                  <button class="dc-tbtn" type="button" id="resetBtn"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Reiniciar</button>
+                  <button class="dc-icon-btn" type="button" data-dc-sound><i class="bi bi-volume-up-fill" aria-hidden="true"></i></button>
+                  <button class="dc-icon-btn" type="button" data-dc-fullscreen="#stage"><i class="bi bi-arrows-fullscreen" aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+              <p class="dc-notice dc-notice--error" id="micError" hidden></p>
+              <div class="sm-main">
+                <div class="sm-light" id="light" data-state="off" aria-hidden="true">
+                  <span class="sm-lamp sm-lamp--red"></span>
+                  <span class="sm-lamp sm-lamp--yellow"></span>
+                  <span class="sm-lamp sm-lamp--green"></span>
+                </div>
+                <div class="sm-info">
+                  <p class="sm-msg" id="msg" aria-live="polite">Activa el micrófono para empezar.</p>
+                  <div class="sm-meter" aria-hidden="true">
+                    <span class="sm-meter__fill" id="meterFill"></span>
+                    <span class="sm-meter__mark" id="markYellow"></span>
+                    <span class="sm-meter__mark" id="markRed"></span>
+                  </div>
+                  <dl class="sm-stats">
+                    <div class="sm-stat sm-stat--green"><dt>En verde</dt><dd id="pGreen">–</dd></div>
+                    <div class="sm-stat sm-stat--yellow"><dt>En amarillo</dt><dd id="pYellow">–</dd></div>
+                    <div class="sm-stat sm-stat--red"><dt>En rojo</dt><dd id="pRed">–</dd></div>
+                    <div class="sm-stat"><dt>Veces en rojo</dt><dd id="redCount">0</dd></div>
+                    <div class="sm-stat"><dt>Tiempo</dt><dd id="elapsed">0:00</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           IDEAS PARA CLASE
+           ============================================================= -->
+      <section class="dc-section dc-section--compact dc-section--tinted dc-theme-yellow" id="ideas" aria-labelledby="ideas-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-reveal">
+            <p class="dc-eyebrow"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i> Ideas para tu clase</p>
+            <h2 class="dc-title" id="ideas-title">¿Cómo usarla en el aula?</h2>
+          </header>
+          <ul class="dc-ideas" data-dc-stagger>
+            <li class="dc-idea dc-theme-green dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-trophy-fill"></i></span>
+              <h3>Reto del verde</h3>
+              <p>Si el grupo mantiene el verde un 80 % del tiempo de trabajo, gana un punto o unos minutos de juego.</p>
+            </li>
+            <li class="dc-idea dc-theme-blue dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+              <h3>Trabajo en equipo</h3>
+              <p>Usa el amarillo como «voz de equipo»: se puede hablar, pero sin que se escuche en la mesa de al lado.</p>
+            </li>
+            <li class="dc-idea dc-theme-pink dc-reveal">
+              <span class="dc-idea__icon" aria-hidden="true"><i class="bi bi-chat-heart-fill"></i></span>
+              <h3>Reflexión al final</h3>
+              <p>Mira con el grupo las estadísticas: ¿en qué momento subió el ruido? ¿Qué podemos hacer mejor?</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           HERRAMIENTAS RELACIONADAS
+           ============================================================= -->
+      <section class="dc-section dc-section--compact" id="relacionadas" aria-labelledby="related-title">
+        <div class="dc-container">
+          <header class="dc-section-head dc-section-head--left dc-reveal">
+            <p class="dc-eyebrow dc-theme-yellow"><i class="bi bi-stars" aria-hidden="true"></i> Más dinámicas</p>
+            <h2 class="dc-title" id="related-title">Prueba también</h2>
+          </header>
+          <div class="dc-mini-tools" data-dc-stagger>
+            <a class="dc-mini-tool dc-theme-red dc-reveal" href="pomodoro.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-stopwatch-fill"></i></span>
+              <span><strong>Técnica Pomodoro</strong><span class="dc-mini-tool__desc">Bloques de concentración y descanso.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-cyan dc-reveal" href="mapa-asientos.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-person-workspace"></i></span>
+              <span><strong>Mapa de asientos</strong><span class="dc-mini-tool__desc">Acomoda al grupo en el salón.</span></span>
+            </a>
+            <a class="dc-mini-tool dc-theme-blue dc-reveal" href="asignador-grupos.html">
+              <span class="dc-mini-tool__icon" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+              <span><strong>Grupos aleatorios</strong><span class="dc-mini-tool__desc">Forma equipos equilibrados al azar.</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+         PIE DE PÁGINA
+         ============================================================= -->
+    <footer class="dc-footer">
+      <div class="dc-container dc-footer__grid">
+        <div>
+          <a class="dc-brand" href="index.html">
+            <img src="IMG/logo/logo-128x128.svg" alt="" width="42" height="42">
+            <span>Dinami<span class="dc-brand__accent">clase</span></span>
+          </a>
+          <p>Herramientas didácticas gratuitas para dinamizar tus clases y aprender jugando.</p>
+        </div>
+        <nav aria-labelledby="footer-tools">
+          <h2 id="footer-tools">Herramientas</h2>
+          <ul class="dc-footer__links">
+            <li><a href="asignador-grupos.html">Grupos aleatorios</a></li>
+            <li><a href="asignador-temas.html">Asignador de temas</a></li>
+            <li><a href="storycube-normal.html">Story Icons</a></li>
+            <li><a href="storycube-por-lotes.html">Story Icons por lotes</a></li>
+            <li><a href="loteria-app.html">Lotería interactiva</a></li>
+            <li><a href="loteria-aleatoria.html">Lotería una a una</a></li>
+            <li><a href="ruleta.html">Ruleta de sorteos</a></li>
+            <li><a href="preguntas-rompe-hielo.html">Preguntas rompe-hielo</a></li>
+            <li><a href="pizarra.html">Pizarra de dibujo</a></li>
+            <li><a href="pomodoro.html">Técnica Pomodoro</a></li>
+            <li><a href="codigo-qr.html">Códigos QR</a></li>
+            <li><a href="memorama.html">Memorama de conceptos</a></li>
+            <li><a href="palabra-secreta.html">Palabra secreta</a></li>
+            <li><a href="tangram.html">Tangram</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="semaforo-ruido.html">Semáforo de ruido</a></li>
+            <li><a href="cadaver-exquisito.html">Cadáver exquisito</a></li>
+            <li><a href="mapa-asientos.html">Mapa de asientos</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Tus datos</h2>
+          <p>Tus listas y preferencias se guardan solo en este navegador. No pedimos registros ni datos personales.</p>
+          <button class="dc-link-btn" type="button" data-dc-clear-data><i class="bi bi-trash3" aria-hidden="true"></i> Borrar mis datos guardados</button>
+        </div>
+      </div>
+      <p class="dc-footer__legal">Hecho por sm2 - Agencia Creativa · Dinamiclase</p>
+    </footer>
+
+    <script src="dinamiclase.js"></script>
+    <script src="semaforo-ruido.js"></script>
+  </body>
+</html>

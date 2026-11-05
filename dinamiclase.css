@@ -63,6 +63,7 @@
   --dc-yellow: #FFC53D;  --dc-yellow-dark: #8A5A00;  --dc-yellow-soft: #FFF2CC;
   --dc-red: #E11D48;     --dc-red-dark: #A8102F;     --dc-red-soft: #FFE0E6;
   --dc-cyan: #0EA5E9;    --dc-cyan-dark: #065F8F;    --dc-cyan-soft: #DBF1FC;
+  --dc-indigo: #4F46E5;  --dc-indigo-dark: #3730A3;  --dc-indigo-soft: #E0E7FF;
 
   /* Neutros */
   --dc-ink: #231942;        /* texto principal */
@@ -113,6 +114,7 @@
 .dc-theme-yellow { --c: var(--dc-yellow); --c-dark: var(--dc-yellow-dark); --c-soft: var(--dc-yellow-soft); --c-on: var(--dc-ink); }
 .dc-theme-red    { --c: var(--dc-red);    --c-dark: var(--dc-red-dark);    --c-soft: var(--dc-red-soft);    --c-on: #fff; }
 .dc-theme-cyan   { --c: var(--dc-cyan);   --c-dark: var(--dc-cyan-dark);   --c-soft: var(--dc-cyan-soft);   --c-on: var(--dc-ink); }
+.dc-theme-indigo { --c: var(--dc-indigo); --c-dark: var(--dc-indigo-dark); --c-soft: var(--dc-indigo-soft); --c-on: #fff; }
 
 
 /* ---------------------------------------------------------------------
@@ -607,6 +609,9 @@ html {
   box-shadow: 0 4px 0 var(--c);
   transition: background-color .2s ease, color .2s ease;
 }
+/* Si el último elemento dejaría un hueco suelto en la fila, ocupa dos columnas */
+.dc-quick__grid > li:last-child:nth-child(5n + 4) { grid-column: span 2; }
+button.dc-quick__item { width: 100%; padding: 0; border: 0; background: none; font-family: inherit; cursor: pointer; }
 .dc-quick__item:hover, .dc-quick__item:focus-visible { transform: translateY(-4px) rotate(-3deg); color: var(--c-dark); }
 .dc-quick__item:hover .dc-quick__icon, .dc-quick__item:focus-visible .dc-quick__icon {
   background: var(--c-dark);
@@ -1510,7 +1515,7 @@ textarea.dc-input { min-height: 150px; resize: vertical; }
   .dc-split, .dc-split--even, .dc-split--wide { grid-template-columns: minmax(0, 1fr); }
   .dc-sticky { position: static; }
 }
-.dc-stack { display: grid; gap: 1.15rem; }
+.dc-stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.15rem; }  /* minmax(0) evita que el contenido desborde la columna */
 .dc-stack--sm { gap: .6rem; }
 .dc-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
 .dc-row--between { justify-content: space-between; }
@@ -1616,7 +1621,8 @@ textarea.dc-input--list { min-height: 210px; line-height: 1.55; }
 .dc-segmented input:focus-visible + span { outline: 3px solid var(--dc-blue); outline-offset: 2px; }
 .dc-segmented--sm span { padding: .35rem .7rem; font-size: .84rem; }
 .dc-segmented--block { display: grid; grid-auto-columns: minmax(0, 1fr); grid-auto-flow: column; }
-.dc-segmented--block span { justify-content: center; height: 100%; text-align: center; line-height: 1.2; }
+.dc-segmented--block label { display: flex; }
+.dc-segmented--block span { flex: 1; justify-content: center; height: 100%; text-align: center; line-height: 1.2; }
 .dc-stack > .dc-stepper, .dc-stack > .dc-segmented:not(.dc-segmented--block) { justify-self: start; }
 
 /* Interruptor */
